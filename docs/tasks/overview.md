@@ -20,6 +20,7 @@ The **Tasks** page is the operational core of Orbit. Each task represents an aut
 | **Amazon Checkout** | Completes a purchase on an Amazon account |
 | **Email Generator (iCloud)** | Generates iCloud Hide My Email aliases |
 | **Email Generator (Outlook)** | Creates new Outlook email addresses |
+| **Vinted Search** | Monitors a Vinted search and sends Discord alerts |
 
 ---
 

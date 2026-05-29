@@ -14,14 +14,13 @@ Orbit includes tools for automating actions on **Vinted**, the second-hand fashi
 
 | Tool | Description |
 |------|-------------|
-| **Sniper** | Automatically purchases an item the moment it goes live |
-| **Tracker** | Monitors a search or seller for new listings and sends alerts |
+| **Search** | Monitors a Vinted search and sends Discord alerts for new listings |
 
 ---
 
-## How Vinted Automation Works
+## How Vinted Monitoring Works
 
-Orbit uses a logged-in Vinted session to interact with the platform. Unlike Amazon, Vinted requires your **personal credentials** (not generated accounts) — you log in once and Orbit maintains the session.
+Orbit polls your Vinted search URL at regular intervals and sends a Discord notification the moment a new listing appears that matches your criteria.
 
 ---
 

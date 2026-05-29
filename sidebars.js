@@ -70,7 +70,7 @@ const sidebars = {
       label: 'Vinted',
       collapsible: true,
       collapsed: false,
-      items: ['vinted/overview', 'vinted/sniper', 'vinted/tracker'],
+      items: ['vinted/overview', 'vinted/search'],
     },
     'troubleshooting',
   ],
