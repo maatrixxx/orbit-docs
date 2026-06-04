@@ -3,6 +3,20 @@ const sidebars = {
   docs: [
     {
       type: 'category',
+      label: '🚀 Beginner Guide',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'guide/overview',
+        'guide/proxies',
+        'guide/sms',
+        'guide/captcha',
+        'guide/first-tasks',
+        'guide/best-practices',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Introduction',
       collapsible: true,
       collapsed: false,

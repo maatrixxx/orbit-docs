@@ -1,0 +1,34 @@
+{
+  "sidebar.docs.category.🚀 Beginner Guide": {
+    "message": "🚀 Guide Débutant",
+    "description": "The label for the Beginner Guide category in the sidebar"
+  },
+  "sidebar.docs.category.Introduction": {
+    "message": "Introduction",
+    "description": "The label for the Introduction category in the sidebar"
+  },
+  "sidebar.docs.category.Settings": {
+    "message": "Paramètres",
+    "description": "The label for the Settings category in the sidebar"
+  },
+  "sidebar.docs.category.Emails": {
+    "message": "Emails",
+    "description": "The label for the Emails category in the sidebar"
+  },
+  "sidebar.docs.category.Proxies": {
+    "message": "Proxies",
+    "description": "The label for the Proxies category in the sidebar"
+  },
+  "sidebar.docs.category.Accounts": {
+    "message": "Comptes",
+    "description": "The label for the Accounts category in the sidebar"
+  },
+  "sidebar.docs.category.Tasks — Amazon": {
+    "message": "Tâches — Amazon",
+    "description": "The label for the Tasks Amazon category in the sidebar"
+  },
+  "sidebar.docs.category.Vinted": {
+    "message": "Vinted",
+    "description": "The label for the Vinted category in the sidebar"
+  }
+}

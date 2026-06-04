@@ -11,7 +11,14 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
-  i18n: { defaultLocale: 'en', locales: ['en'] },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+    localeConfigs: {
+      en: { label: '🇬🇧 English' },
+      fr: { label: '🇫🇷 Français' },
+    },
+  },
 
   presets: [
     [
@@ -44,6 +51,10 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
           {
             href: 'https://discord.gg/orbit',
             label: 'Discord',

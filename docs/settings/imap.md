@@ -60,6 +60,19 @@ Google application passwords require that **2-Step Verification** is enabled on 
 2. Under "Sign-In and Security", select "App-Specific Passwords".
 3. Generate a new password, copy it, and paste it into Orbit.
 
+:::tip Use Gmail IMAP instead of iCloud IMAP
+While iCloud IMAP works in Orbit, we **recommend connecting a Gmail account** instead. Here's why:
+
+iCloud Hide My Email aliases all **forward to your main iCloud inbox** (or to any address you configure). If you set that forwarding address to a Gmail account, you can then connect that Gmail inbox via IMAP in Orbit — which is generally more stable and faster than iCloud's IMAP server.
+
+**Recommended setup:**
+1. In iCloud Settings → Hide My Email, set your forwarding address to a Gmail account you control.
+2. In Orbit → Settings → IMAP, add that Gmail account with an application password.
+3. When creating Amazon Gen tasks, select the Gmail IMAP account for OTP interception.
+
+This way, all verification emails sent to any iCloud alias arrive in Gmail, and Orbit reads them instantly via Gmail IMAP.
+:::
+
 **Outlook / Hotmail:**
 You can use your regular Microsoft account password if your account does not have two-factor authentication enforced. If it does, generate an app password from your Microsoft account security settings.
 
