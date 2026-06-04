@@ -24,7 +24,7 @@ CapGuru est le résolveur de CAPTCHA intégré directement dans Orbit. Il est sp
 | Intégré dans Orbit | ✅ Oui (intégration native) |
 
 :::tip Extrêmement peu cher
-À ces prix, l'anti-captcha coûte pratiquement rien. $0.10 sur CapGuru couvrent confortablement tes 1000+ premières générations.
+À ces prix, l'anti-captcha ne coûte pratiquement rien. $0.10 sur CapGuru couvrent confortablement tes 1000+ premières générations.
 :::
 
 ---

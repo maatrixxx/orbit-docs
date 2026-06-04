@@ -10,7 +10,7 @@ Quelques recommandations pour obtenir les meilleurs résultats sans rencontrer d
 
 ---
 
-## Ne surchargez pas ta machine
+## Ne surcharge pas ta machine
 
 Orbit ouvre une vraie fenêtre de navigateur par tâche. Chaque navigateur consomme de la RAM et du CPU.
 
