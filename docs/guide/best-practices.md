@@ -50,8 +50,6 @@ Always run **5 tasks first** to make sure everything is working (proxies connect
 
 ## Need help?
 
-The best place to ask questions, share tips, or find out which proxies are working best right now is the **Orbit Discord**.
-
-Join here → **[discord.gg/orbit](https://discord.gg/orbit)**
+The best place to ask questions, share tips, or find out which proxies are working best right now is the **Orbit Discord** — which you already have access to!
 
 The community is active and members are happy to help newcomers get their setup working.

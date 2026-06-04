@@ -50,8 +50,6 @@ Lance toujours **5 tâches en premier** pour vérifier que tout fonctionne (prox
 
 ## Besoin d'aide ?
 
-Le meilleur endroit pour poser des questions, partager des tips ou savoir quels proxies fonctionnent le mieux en ce moment, c'est le **Discord Orbit**.
+Le meilleur endroit pour poser des questions, partager des tips ou savoir quels proxies fonctionnent le mieux en ce moment, c'est le **Discord Orbit** — que tu as déjà !
 
-Rejoins ici → **[discord.gg/orbit](https://discord.gg/orbit)**
-
-La communauté est active et les membres sont contents d'aider les nouveaux à faire fonctionner leur setup.
+La communauté est active et les membres sont là pour aider les nouveaux à faire fonctionner leur setup.
