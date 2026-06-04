@@ -1,3 +1,4 @@
+// v2
 const REDIRECT_URI = 'https://docs.orbit-tool.com/api/auth/callback'
 
 const LOGIN_HTML = `<!DOCTYPE html>
