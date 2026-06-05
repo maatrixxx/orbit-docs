@@ -1,6 +1,8 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  docs: [
+
+  // ── Guide sidebar (beginner guide only — translatable) ──────────────────
+  guideSidebar: [
     {
       type: 'category',
       label: '🚀 Beginner Guide',
@@ -15,6 +17,10 @@ const sidebars = {
         'guide/best-practices',
       ],
     },
+  ],
+
+  // ── Docs sidebar (full reference — English only) ─────────────────────────
+  docsSidebar: [
     {
       type: 'category',
       label: 'Introduction',

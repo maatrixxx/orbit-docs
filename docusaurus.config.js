@@ -52,12 +52,19 @@ const config = {
         },
         items: [
           {
-            type: 'localeDropdown',
-            position: 'right',
+            type: 'docSidebar',
+            sidebarId: 'guideSidebar',
+            position: 'left',
+            label: 'Guide',
           },
           {
-            href: 'https://discord.gg/orbit',
-            label: 'Discord',
+            type: 'docSidebar',
+            sidebarId: 'docsSidebar',
+            position: 'left',
+            label: 'Docs',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
