@@ -18,7 +18,12 @@ Datacenter proxies are cheap but easily detected and blocked by Amazon. Always u
 
 ## Recommended providers
 
-### Resilab *(recommended for beginners)*
+### Flame Proxies *(cheapest option)*
+**[flameproxies.com/dashboard/new-proxies](https://flameproxies.com/dashboard/new-proxies)**
+
+The most affordable option on the market. Great for getting started without spending much. Well-suited for Amazon gen and invites.
+
+### Resilab *(good price/quality ratio)*
 **[resilab.vip/dashboard](https://www.resilab.vip/dashboard)**
 
 A solid resi provider with a good price/quality ratio. Well-suited for Amazon gen.

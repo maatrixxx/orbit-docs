@@ -27,6 +27,19 @@ Click **Import**. The count next to the group name will update.
 
 ---
 
+## Adding Emails Manually
+
+You can also add emails one by one directly inside the group manager — no CSV needed:
+
+1. Open the group (click on it in the Emails list).
+2. Click **✏️ Add manually**.
+3. Type or paste emails in the text area — one per line, or separated by commas.
+4. Click **Add**. The emails are immediately added to the list.
+
+This is useful for adding a few addresses quickly without preparing a file.
+
+---
+
 ## Deleting Emails
 
 - **Delete one** — click the ✕ next to any email in the list.

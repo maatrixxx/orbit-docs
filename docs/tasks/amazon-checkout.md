@@ -63,6 +63,31 @@ For each account in the group, Orbit:
 
 ---
 
+---
+
+## Checkout Scan Recap
+
+After a **Checkout Scan** task completes, Orbit automatically shows a **Recap modal** summarising all scanned items.
+
+### What it shows
+
+- **Product image** for each item
+- **×N count** — how many checkouts were detected for that product
+- **Email list** — the accounts associated with each item (with a toggle to hide them for screenshots)
+
+### How to use it
+
+- The recap appears automatically when the scan finishes.
+- Close it with ✕ — it will stay available as long as the task is not deleted.
+- To **reopen** the recap at any time, click the **📊 Recap** button on the task row.
+- The recap is **cleared when the task is deleted**.
+
+:::tip Hide emails for screenshots
+Use the **🙈 Masquer les mails** toggle to hide all email addresses before sharing a screenshot — great for showing results without exposing account details.
+:::
+
+---
+
 ## Tips
 
 :::tip
