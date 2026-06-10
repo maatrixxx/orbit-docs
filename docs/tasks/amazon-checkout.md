@@ -65,6 +65,38 @@ For each account in the group, Orbit:
 
 ---
 
+## Email Scan Mode (IMAP Scan)
+
+Instead of running browser sessions, the **Email Scan** mode scans one or more IMAP mailboxes for Amazon invite emails and extracts the results automatically — no proxy, no browser required.
+
+### Supported Regions
+
+| Region | Marketplace | Email window |
+|--------|-------------|--------------|
+| 🇫🇷 FR | amazon.fr | Last **72 hours** |
+| 🇯🇵 JP | amazon.co.jp | Last **48 hours** |
+
+### How to create an Email Scan task
+
+1. Go to **Tasks → Amazon Checkout → New Task**.
+2. Toggle **Email Scan** mode.
+3. Choose your **Region** (FR or JP).
+4. Select one or more **IMAP accounts** to scan — you can pick multiple accounts and Orbit will scan all of them in sequence and merge the results.
+5. Optionally enter a **Discord webhook** to receive the recap automatically.
+6. Click **Create task** then **▶ Start**.
+
+### What it detects
+
+**FR:** emails with subject containing *"invité à passer commande"* or *"Félicitations"*
+
+**JP:** emails with subject containing *「おめでとうございます。招待者に選ばれました」* (Japanese) or *"Congrats, you're invited"* (English). Request-confirmation emails (*「招待リクエストを受け付けました」*) are **automatically ignored**.
+
+### Multi-mailbox scanning
+
+When you select **multiple IMAP accounts**, Orbit scans each inbox sequentially and merges all results into a single recap — one entry per product, with all winning emails grouped together.
+
+---
+
 ## Checkout Scan Recap
 
 After a **Checkout Scan** task completes, Orbit automatically shows a **Recap modal** summarising all scanned items.
@@ -96,4 +128,8 @@ Always run a **Session task** on the account group before a Checkout task to ens
 
 :::caution
 Amazon monitors purchasing patterns. Buying the same product on many accounts in rapid succession may trigger fraud checks. Use delays between accounts where possible.
+:::
+
+:::tip Kill Browsers
+If you notice orphaned browser processes lingering after tasks finish, use the **☠ Kill Browsers** button in the Tasks toolbar to forcefully close all Playwright Chromium processes opened by Orbit.
 :::

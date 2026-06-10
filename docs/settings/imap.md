@@ -103,6 +103,14 @@ ssl://imap.example.com:993
 
 ## Using IMAP in Tasks
 
+### Amazon Generator (OTP interception)
+
 When creating an **Amazon Generator** task, select your IMAP account in the **Mailbox for OTP** section. Orbit will automatically catch codes for the email address used in that task.
 
 If no IMAP account is selected, OTP codes must be entered **manually** when prompted.
+
+### Amazon Checkout — Email Scan
+
+IMAP accounts are also used in **Checkout Email Scan** tasks. Orbit scans your inbox for Amazon invite emails (FR or JP) and extracts winning accounts automatically — no browser needed.
+
+You can select **multiple IMAP accounts** at once to scan all mailboxes in a single task and get a combined recap.
