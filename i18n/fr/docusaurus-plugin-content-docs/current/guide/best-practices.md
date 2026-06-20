@@ -19,7 +19,7 @@ Orbit ouvre une vraie fenêtre de navigateur par tâche. Chaque navigateur conso
 Faire tourner 50+ tâches en même temps sur une machine standard provoquera des ralentissements, des crashs et des comptes ratés. Mieux vaut lancer 15 tâches proprement et mettre le reste en attente.
 
 :::tip
-Utilise **⚡ Smart Start** plutôt que **▶ Start All** — ça décale les lancements de quelques secondes, ce qui est plus doux pour ta machine et évite d'envoyer un pic de requêtes à Amazon exactement au même moment.
+Utilise **Smart Start** plutôt que **Start All** — ça décale les lancements de quelques secondes, ce qui est plus doux pour ta machine et évite d'envoyer un pic de requêtes à Amazon exactement au même moment.
 :::
 
 ---

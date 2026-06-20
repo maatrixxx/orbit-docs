@@ -14,8 +14,12 @@ Amazon requires a **phone number verification** during account creation. Orbit i
 
 | Provider | Website |
 |----------|---------|
-| **5sim** | [5sim.net](https://5sim.net) |
-| **SMS-Activate** | [sms-activate.io](https://sms-activate.io) |
+| **Hero-SMS** | [hero-sms.com](https://hero-sms.com) |
+| **5SIM** | [5sim.net](https://5sim.net) |
+| **SMSMan** | [sms-man.com](https://sms-man.com) |
+| **SMSPool** | [smspool.net](https://smspool.net) |
+| **GrizzlySMS** | [grizzlysms.com](https://grizzlysms.com) |
+| **SMS Bower** | [smsbower.com](https://smsbower.com) |
 
 ---
 
@@ -38,7 +42,7 @@ When creating an Amazon Generator task, you configure SMS settings per task:
 
 | Field | Description |
 |-------|-------------|
-| **Country** | The country of the phone number to rent (e.g. 🇫🇷 France +33) |
+| **Country** | The country of the phone number to rent (e.g. France +33) |
 | **Max Price (€)** | Maximum price you're willing to pay per number. If no number is available below this price, the task will wait or fail. |
 
 :::tip

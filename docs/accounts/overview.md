@@ -30,14 +30,14 @@ Each account card shows:
 
 | Status | Meaning |
 |--------|---------|
-| 🟢 **Active** | Account is in good standing |
-| 🔴 **Banned** | Account has been suspended by Amazon |
-| ⚪ **Unknown** | Status not yet checked |
+| **Active** | Account is in good standing |
+| **Banned** | Account has been suspended by Amazon |
+| **Unknown** | Status not yet checked |
 
 ---
 
 ## Account Groups
 
-Accounts are organised into **groups** (e.g. `Amazon FR — Batch 1`). Groups are used when running Invite, Session, or Checkout tasks — you target an entire group at once.
+Accounts are organised into **groups** (e.g. `Amazon FR — Batch 1`), each tagged with a region (FR, UK, or JP). Groups are used when running Session, Invite, or Win Check tasks — you target an entire group at once, filtered to groups matching the task's region.
 
-Each group shows the total number of accounts and their status breakdown.
+Each group shows the total number of accounts and a duplicate-email warning if any account appears more than once.

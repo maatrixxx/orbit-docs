@@ -20,7 +20,7 @@ Ouvre Orbit → **Settings** et remplis chaque section :
 ### SMS
 - **Fournisseur** → sélectionne **Hero SMS**
 - **Clé API** → colle ta clé Hero SMS
-- Clique sur **Test connection** — ton solde doit apparaître ✅
+- Clique sur **Test connection** — ton solde doit apparaître
 
 ### IMAP *(optionnel mais recommandé)*
 Une boîte IMAP permet à Orbit de récupérer automatiquement le code de vérification email qu'Amazon envoie pendant l'inscription. Sans ça, tu devras entrer les codes manuellement.
@@ -75,7 +75,7 @@ Remplis le formulaire :
 
 | Champ | Quoi mettre |
 |-------|-------------|
-| **Région** | FR (France) ou UK |
+| **Région** | FR (France), UK, ou JP (Japon) |
 | **Nombre de tâches** | Commence par 5–10 pour tester |
 | **Groupe de proxies** | Sélectionne le groupe créé |
 | **Groupe de profils** | Sélectionne ton groupe (ou laisse sur "Random") |
@@ -90,7 +90,7 @@ Clique sur **Créer les tâches** — elles apparaissent dans la liste.
 
 ## 6. Lancer
 
-Clique sur **▶ Start All** (ou **⚡ Smart Start** pour décaler les lancements et éviter les pics).
+Clique sur **Start All** (ou **Smart Start** pour décaler les lancements et éviter les pics).
 
 Chaque carte de tâche affiche l'étape en cours en temps réel. Un flow typique :
 1. Ouverture du navigateur
@@ -98,7 +98,7 @@ Chaque carte de tâche affiche l'étape en cours en temps réel. Un flow typique
 3. Résolution du CAPTCHA (CapGuru)
 4. Vérification téléphonique (Hero SMS — automatique)
 5. Code OTP par email (IMAP — automatique)
-6. ✅ Compte créé et sauvegardé
+6. Compte créé et sauvegardé
 
 ---
 

@@ -12,12 +12,20 @@ This page covers the most common issues and how to resolve them.
 
 ## Installation
 
-### Orbit won't open after installation
+### Orbit won't open after installation (Windows)
 
 - Make sure you're on **Windows 10 or 11** (64-bit)
 - Try right-clicking the installer and selecting **Run as administrator**
 - Check that your antivirus is not blocking Orbit — add an exception for the Orbit installation folder
 - If Windows shows a SmartScreen warning, click **More info → Run anyway**
+
+### "WebSocket server not connected" error on any task (Mac)
+
+This means a helper binary inside the app got blocked by macOS Gatekeeper, even though the main app was allowed to open. Run this in Terminal, then relaunch Orbit:
+
+```
+xattr -cr /Applications/Orbit.app
+```
 
 ### Chromium is stuck "installing"
 
@@ -32,23 +40,23 @@ If it appears stuck for more than 5 minutes:
 
 ## Amazon Generator
 
-### "❌ SMS timeout" — no code received
+### "SMS timeout" — no code received
 
-- Check your **5sim or GetSMS balance** — you may be out of credit
+- Check your **SMS provider balance** — you may be out of credit
 - Verify your **SMS API key** in Settings → SMS
 - Try a different SMS country or provider
 - Some numbers are of poor quality — the task will retry automatically
 
-### "❌ Captcha failed" — CapGuru not solving
+### "Captcha failed" — CapGuru not solving
 
 - Check your **CapGuru balance** in Settings → CapGuru
 - Verify your **CapGuru API key** is correct
 - CapGuru may be experiencing high load — wait a few minutes and retry
 
-### "❌ Email already used" on every email
+### "Email already used" on every email
 
 - Your email list may be exhausted — all emails already have Amazon accounts
-- Generate more emails using the iCloud or Outlook generator
+- Generate more emails using the iCloud generator
 - Check that your IMAP settings are correct so OTPs can be received
 
 ### OTP email never arrives
@@ -93,23 +101,6 @@ Status is not automatically checked after creation. Run a **Session task** on th
 - Ensure your iCloud account has an active **iCloud+ subscription**
 - Apple may have temporarily rate-limited your account — wait 30–60 minutes and retry
 - The minimum interval is 10 minutes — setting it lower will cause Apple to block generation
-
----
-
-## Vinted
-
-### Sniper not purchasing
-
-- Check that your Vinted session is still valid — you may need to re-login
-- Ensure the item URL is correct and the listing is still active
-- Verify your **Max price** is set high enough
-- Confirm a payment method is saved on the Vinted account
-
-### Tracker not sending Discord alerts
-
-- Verify your **Discord webhook URL** is correct in Settings → Discord
-- Check that the webhook channel still exists and the webhook hasn't been deleted
-- Ensure the task is in **Running** state (not stopped)
 
 ---
 

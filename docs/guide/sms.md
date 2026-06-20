@@ -19,7 +19,7 @@ Hero SMS is the service we recommend. It works directly with Orbit and offers gr
 | Detail | Info |
 |--------|------|
 | Price per number | $0.05 – $0.30 depending on country |
-| Supported by Orbit | ✅ Yes (native integration) |
+| Supported by Orbit | Yes (native integration) |
 | Minimum deposit | A few dollars is enough to get started |
 
 ---

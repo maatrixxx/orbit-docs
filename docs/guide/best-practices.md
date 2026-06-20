@@ -19,7 +19,7 @@ Orbit opens a real browser window per task. Each browser uses RAM and CPU.
 Running 50+ tasks at once on a standard machine will cause slowdowns, crashes, and failed accounts. It's better to run 15 tasks cleanly and queue the rest than to hammer your machine.
 
 :::tip
-Use **⚡ Smart Start** instead of **▶ Start All** — it staggers task launches every few seconds, which is gentler on your machine and avoids sending a spike of requests to Amazon at the exact same time.
+Use **Smart Start** instead of **Start All** — it staggers task launches every few seconds, which is gentler on your machine and avoids sending a spike of requests to Amazon at the exact same time.
 :::
 
 ---

@@ -26,17 +26,6 @@ Click **Import**. The count badge on the group will update.
 
 ---
 
-## Testing Proxies
-
-Click **Test** on a proxy group to verify connectivity. Each proxy is checked against Amazon and marked as:
-
-- ✅ **Active** — proxy works
-- ❌ **Dead** — proxy is unreachable or banned
-
-Dead proxies are skipped automatically when tasks run.
-
----
-
 ## Proxy Assignment in Tasks
 
 When you create tasks with a proxy group selected, proxies are assigned in a loop:

@@ -32,7 +32,7 @@ Click **Import**. The count next to the group name will update.
 You can also add emails one by one directly inside the group manager — no CSV needed:
 
 1. Open the group (click on it in the Emails list).
-2. Click **✏️ Add manually**.
+2. Click **Add manually**.
 3. Type or paste emails in the text area — one per line, or separated by commas.
 4. Click **Add**. The emails are immediately added to the list.
 
@@ -42,8 +42,8 @@ This is useful for adding a few addresses quickly without preparing a file.
 
 ## Deleting Emails
 
-- **Delete one** — click the ✕ next to any email in the list.
-- **Delete group** — click the 🗑 icon next to the group name. This deletes all emails in the group.
+- **Delete one** — click the delete icon next to any email in the list.
+- **Delete group** — click the delete icon next to the group name. This deletes all emails in the group.
 
 :::caution
 Deleting a group is permanent. Tasks that referenced this group will still exist but won't have an email assigned.

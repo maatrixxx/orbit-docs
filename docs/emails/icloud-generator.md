@@ -18,11 +18,13 @@ This feature requires an active **iCloud+** subscription (paid iCloud storage pl
 
 Before running the iCloud generator:
 
-1. Go to **Settings → iCloud Account** and connect your iCloud account by clicking **Connect iCloud account**.
+1. Go to **Settings → iCloud** and click **Connect iCloud account**.
 2. A real Chromium browser window will open — log in to iCloud with your Apple ID and complete 2FA.
-3. Once logged in, click **✅ Save session now** in Orbit.
-4. The browser minimizes to the background. Settings will show **iCloud account connected**.
+3. Once logged in, click **Save session now** in Orbit.
+4. The browser minimizes to the background. Settings will show the connected account with a "Browser running" status.
 5. Ensure your iCloud account has an active iCloud+ plan.
+
+You can connect **multiple iCloud accounts** at once — each gets its own nickname and connection status in Settings, and you choose which account a given task uses when creating it.
 
 :::warning Keep the browser running
 The browser session must stay open in the background for the generator to work. If you close the browser window, Orbit will detect it within seconds and mark the task as failed. You will need to reconnect from Settings.
@@ -32,17 +34,20 @@ The browser session must stay open in the background for the generator to work. 
 
 ## Creating an iCloud Generator Task
 
-1. Go to **Tasks** and click **+ New Task**.
-2. Select **iCloud Gen**.
+1. Go to **Tasks** and click **+ Create**.
+2. Select **iCloud Gen** (under the iCloud category).
 3. Fill in:
 
 | Field | Description |
 |-------|-------------|
 | **Task name** | A label for this task (e.g. `iCloud gen — main`) |
 | **Email list** | The list where generated aliases will be saved |
-| **Interval** | Time between alias creations (minimum 10 min, recommended **12 min**) |
+| **iCloud account** | Which connected session to use (auto-selects the first connected one if left blank) |
+| **Interval between aliases** | Time between alias creations (minimum 10 min, recommended **12 min**) |
+| **Max aliases** | Stop automatically after this many aliases (0 = unlimited) |
+| **Pause mode** | See below |
 
-4. Click **Create task**, then click **▶ Start**.
+4. Click **Create task**, then click **Start**.
 
 :::info
 If the iCloud browser is not connected when you click Start, Orbit will block the launch and show an error. Go to **Settings → iCloud** to reconnect first.
@@ -55,6 +60,27 @@ If the iCloud browser is not connected when you click Start, Orbit will block th
 Apple enforces a limit of approximately **5 aliases per hour** per iCloud account. The recommended interval of 12 minutes ensures you stay within this limit.
 
 Setting the interval too low may cause Apple to temporarily block alias generation for your account.
+
+---
+
+## Pause Mode
+
+For longer-running generation, you can configure Orbit to pause periodically instead of generating continuously — useful for spreading generation out over a day in a less mechanical pattern.
+
+| Mode | Description |
+|------|-------------|
+| **None** | Continuous generation at the configured interval (default) |
+| **Pause every N aliases** | After a fixed number of aliases, pause for a configured duration before resuming |
+| **Smart** | Alternates between an active generation window and a pause window, both independently configurable |
+
+### Smart mode settings
+
+- **Active gen window** — how long the bot keeps generating before it pauses. Either a fixed duration, or a random duration picked within a min/max range each cycle.
+- **Pause duration** — how long the bot waits once paused before resuming. Same fixed-or-random-range choice.
+
+For example: generate for a random 2–3 hour window, then pause for a random 2–4 hours, then repeat — all while still respecting the per-alias interval and Apple's rate limit during active windows.
+
+Stopping the task takes effect immediately, even in the middle of a multi-hour pause.
 
 ---
 
@@ -88,7 +114,7 @@ Orbit fills in the label field with **"orbit"** (all aliases share the same labe
 The captured alias is immediately saved to your selected email list in Orbit via the backend API.
 
 ### 7. Wait
-Orbit displays a countdown timer on the task card (e.g. `⏱ Next in 11m 43s`) and waits for the configured interval before starting the next cycle.
+Orbit waits for the configured interval (or pause duration, if a pause is due) before starting the next cycle.
 
 ---
 
@@ -100,10 +126,9 @@ While the generator is running, the task card shows:
 |---------|-------------|
 | **RUNNING** badge | The task is active |
 | `Generating iCloud alias...` | A cycle is in progress |
-| `⏱ Next in Xm XXs` | Countdown to the next generation |
-| `▼ Logs (N)` | Click to expand the log of all generated aliases with timestamps |
-
-Clicking **▼ Logs** opens a dropdown listing every alias generated in this session, with the time of creation and a `#N` counter.
+| `Waiting Xm before next alias...` | Countdown to the next generation |
+| `Pausing X min...` | A pause is in progress (count or smart mode) |
+| Logs | Expand the task to see every alias generated, with timestamps |
 
 ---
 
@@ -111,8 +136,8 @@ Clicking **▼ Logs** opens a dropdown listing every alias generated in this ses
 
 Orbit polls the browser connection every **5 seconds**:
 
-- **Settings shows ✅ "iCloud account connected"** → browser is alive and running.
-- **Settings shows ⚠️ "iCloud browser closed"** → the browser was closed. Click **Reconnect** to open a new session.
+- **Settings shows "Browser running"** → browser is alive and running.
+- **Settings shows "Browser closed"** → the browser was closed. Click **Reconnect** to open a new session.
 - **Task shows error "iCloud browser was closed"** → the browser closed while a task was running. Stop the task, reconnect in Settings, and restart.
 
 ---

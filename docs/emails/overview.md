@@ -16,7 +16,7 @@ Emails are organised into **lists** (also called groups). Each list contains a s
 
 When you create an Amazon Generator task with the **Email list** source, Orbit picks one email from your selected list per task. After the account is successfully created, the email can optionally be **removed from the list automatically** (enable the "Delete email after creation" toggle).
 
-If an email address is already associated with an existing Amazon account, Orbit detects this and marks the task as **❌ Email already used**, with a button to delete it from the list.
+If an email address is already associated with an existing Amazon account, Orbit detects this and marks the task as **Email already used**, with a button to delete it from the list.
 
 ---
 

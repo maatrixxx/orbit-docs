@@ -5,7 +5,7 @@ const sidebars = {
   guideSidebar: [
     {
       type: 'category',
-      label: '🚀 Beginner Guide',
+      label: 'Beginner Guide',
       collapsible: true,
       collapsed: false,
       items: [
@@ -84,13 +84,6 @@ const sidebars = {
         'tasks/amazon-session',
         'tasks/amazon-checkout',
       ],
-    },
-    {
-      type: 'category',
-      label: 'Vinted',
-      collapsible: true,
-      collapsed: false,
-      items: ['vinted/overview', 'vinted/search'],
     },
     'troubleshooting',
   ],

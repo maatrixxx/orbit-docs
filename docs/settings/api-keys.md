@@ -23,7 +23,7 @@ The **API Keys** section is where you configure your CapGuru key, used for autom
 
 ### Usage
 
-When creating an Amazon Generator task, enable **🤖 CapGuru (auto)** in the Captcha section. If CapGuru is not configured, you must solve captchas manually by watching the browser window.
+When creating an Amazon Generator task, enable **CapGuru** in the Captcha section. If CapGuru is not configured, you must solve captchas manually by watching the browser window.
 
 :::info Cost
 Arkose captchas typically cost between €0.01 and €0.05 per solve depending on difficulty. Monitor your CapGuru balance to avoid task failures mid-run.

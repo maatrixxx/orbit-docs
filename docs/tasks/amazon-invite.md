@@ -6,9 +6,9 @@ sidebar_position: 3
 
 # Amazon Invite Task
 
-The Amazon Invite task automates requesting an invitation for **invite-only products** on Amazon. These are limited-edition or high-demand items that require you to click **"Demander une invitation"** (FR) / **"Request an invitation"** (UK) / **"招待をリクエスト"** (JP) before being able to purchase them.
+The Amazon Invite task automates requesting an invitation for **invite-only products** on Amazon — limited-edition or high-demand items marked "Available by invitation" that require a request before you can purchase them.
 
-Orbit does this automatically across all your accounts so you maximise your chances of getting purchase access when the product drops.
+Orbit does this over plain HTTP requests (no browser) across all your accounts, one task per account, so you maximise your chances of getting purchase access when the product drops.
 
 ---
 
@@ -16,85 +16,87 @@ Orbit does this automatically across all your accounts so you maximise your chan
 
 | Region | Marketplace |
 |--------|-------------|
-| 🇫🇷 FR | amazon.fr |
-| 🇬🇧 UK | amazon.co.uk |
-| 🇯🇵 JP | amazon.co.jp |
+| FR | amazon.fr |
+| UK | amazon.co.uk |
+| JP | amazon.co.jp |
+
+Detection of "already requested" and "request invite" works in English, French, and Japanese, matching whatever language the account's Amazon locale is set to.
 
 ---
 
 ## Prerequisites
 
-- ✅ An **account group** with saved session cookies (run a Session task first if needed)
-- ✅ A **proxy group** with residential proxies
-- ✅ The **ASIN(s)** of the invite-only product(s) — found in the product URL: `amazon.fr/dp/`**`B0XXXXXXXX`**
+- An **account group** for the selected region, ideally with saved session cookies
+- A **proxy group** (optional, but recommended)
+- The **ASIN(s)** of the invite-only product(s) — picked from your catalog or entered manually
 
 ---
 
 ## Creating an Invite Task
 
-1. Go to **Tasks** and click **+ New Task**.
-2. Select **Amazon Invite**.
+1. Go to **Tasks** and click **+ Create**.
+2. Select **Amazon Invites** (under the Amazon category).
 3. Fill in the form:
 
 | Field | Description |
 |-------|-------------|
-| **Task name** | A label for this task |
 | **Region** | FR, UK, or JP |
-| **ASINs / URLs** | One ASIN per line (FR/UK), or full product URLs (JP) |
-| **Account group** | The accounts that will request invitations |
-| **Proxy group** | Proxies to use during the task |
+| **Product ASINs** | Select from your catalog, or click **Manual input** to paste ASINs directly |
+| **Account group to use** | The accounts that will request invitations — filtered to groups tagged for the selected region |
+| **Proxies** | No proxy, or a proxy group |
+| **Include session check** | See below |
 
-4. Click **Create task** then **▶ Start**.
+One task is created per account in the selected group.
+
+4. Click **Create task** then **Start**.
+
+---
+
+## Include Session Check
+
+This checkbox controls how Orbit handles each account's session before requesting invitations:
+
+- **Unchecked (default)** — Orbit makes a lightweight HTTP check to confirm the account's saved cookies are still valid. If they're expired, the task stops immediately with a **No session** status instead of wasting requests on a dead session.
+- **Checked** — if the session is invalid, Orbit logs back in via a real (headless) browser first, refreshes the cookies, then proceeds — handling banned accounts and OTP prompts along the way (see [Amazon Session](/tasks/amazon-session)).
 
 ---
 
 ## How It Works
 
-For each account in the group, Orbit:
+For each ASIN, on each account, Orbit:
 
-1. Opens a headless browser with the account's saved cookies
-2. Navigates to each product page
-3. Waits for the **"Demander une invitation"** button to appear
-4. Clicks it and waits up to **20 seconds** for the confirmation message **"Invitation demandée, merci !"** to appear
-5. If confirmed → marks the ASIN as ✅ and sends a Discord webhook notification
-6. If already requested on this account → skips (marked as ℹ️ Already registered)
-7. Moves to the next ASIN
+1. Fetches the product page over HTTP and looks for a request-invite button (a `contractId` embedded in the page).
+2. If not found on the main page, falls back to the "Other sellers" offer listing — some products only expose the invite button there.
+3. Checks the page for an exact "already requested" confirmation (in the account's page language) before assuming a missing button means anything else.
+4. If a button is found, sends the invitation request directly.
+5. There is no retry on ambiguous pages — a single check resolves to **Sent**, **Already registered**, or **Error**, so a flaky page is reported clearly instead of silently retried.
 
 ---
 
-## Task Status Messages
+## Task Status / Result Labels
 
-| Message | Meaning |
-|---------|---------|
-| `✅ ASIN: invitation sent!` | Invitation successfully requested |
-| `ℹ️ ASIN: already registered` | This account already requested this product |
-| `✅ ASIN: already ordered on this account` | Account already purchased this product |
-| `❌ session not saved` | Cookies are stale — run a Session task first |
-| `❌ confirmation not received` | Button was clicked but confirmation didn't appear |
-| `🚫 Browser window closed` | Task stopped because the browser was closed |
+| Result | Meaning |
+|--------|---------|
+| **Sent** | Invitation successfully requested |
+| **Already registered** | This account already requested this product |
+| **Not found** | Product not found (404) — check the ASIN |
+| **Error** | No invite button and no "already requested" confirmation found — needs investigation |
+| **No session** | No active session for this account — enable "Include session check" or run a Session task first |
 
 ---
 
 ## Discord Notifications
 
-When an invitation is successfully sent, Orbit posts a webhook embed to your configured Discord channel with:
-- The product image
-- The ASIN
-- The Amazon region
-- The account email (spoiler-tagged)
+When an invitation is successfully sent, Orbit posts a webhook embed to your configured Discord channel with the product image, the ASIN, the Amazon region, and the account email.
 
 ---
 
 ## Tips
 
 :::tip Fresh sessions = higher success rate
-Always run a **Session task** on your account group before running Invite tasks. Stale cookies cause redirects to the login page, wasting time and proxies.
+Run a **Session task** on your account group before running Invite tasks, or enable **Include session check** on the Invite task itself.
 :::
 
 :::info Already registered
-If an account has already requested an invitation for a product, Orbit skips it automatically — no duplicate clicks.
-:::
-
-:::caution Amazon overload
-During product drops or high-demand periods, Amazon's servers may be slow to respond. Orbit handles this by retrying page loads (up to 3 times per ASIN) before moving on.
+If an account has already requested an invitation for a product, Orbit marks it automatically — no duplicate requests.
 :::

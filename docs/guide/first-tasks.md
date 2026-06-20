@@ -20,7 +20,7 @@ Open Orbit → **Settings** and fill in each section:
 ### SMS
 - **Provider** → select **Hero SMS**
 - **API Key** → paste your Hero SMS key
-- Click **Test connection** — you should see your balance appear ✅
+- Click **Test connection** — you should see your balance appear
 
 ### IMAP *(optional but recommended)*
 An IMAP mailbox lets Orbit automatically catch the email verification code Amazon sends during registration. Without it, you'll need to enter codes manually.
@@ -75,7 +75,7 @@ Fill in the form:
 
 | Field | What to enter |
 |-------|---------------|
-| **Region** | FR (France) or UK |
+| **Region** | FR (France), UK, or JP (Japan) |
 | **Number of tasks** | Start with 5–10 to test |
 | **Proxy group** | Select the group you created |
 | **Profile group** | Select your profile group (or leave on "Random") |
@@ -90,7 +90,7 @@ Click **Create tasks** — the tasks appear in the list.
 
 ## 6. Launch
 
-Click **▶ Start All** (or **⚡ Smart Start** to stagger launches and avoid spikes).
+Click **Start All** (or **Smart Start** to stagger launches and avoid spikes).
 
 Each task card shows the current step in real time. A typical flow:
 1. Opening browser
@@ -98,7 +98,7 @@ Each task card shows the current step in real time. A typical flow:
 3. Solving CAPTCHA (CapGuru)
 4. Phone verification (Hero SMS — automatic)
 5. Email OTP (IMAP — automatic)
-6. ✅ Account created and saved
+6. Account created and saved
 
 ---
 
