@@ -39,6 +39,22 @@ Not sure which to pick? Ask in the Orbit Discord — community members regularly
 
 ---
 
+## Proxy region — important
+
+The region of your proxies **must match** the Amazon marketplace you are generating on.
+
+| Region | Required proxy country |
+|--------|----------------------|
+| 🇫🇷 **FR** | France only — always use French proxies |
+| 🇬🇧 **UK** | United Kingdom only — always use UK proxies |
+| 🇯🇵 **JP** | Any country works — no restriction |
+
+:::warning FR & UK — region mismatch = instant bans
+For French and UK Amazon, using proxies from the wrong country greatly increases the risk of blocks and bans during generation. Make sure your proxy group contains only proxies from the correct country before starting your tasks.
+:::
+
+---
+
 ## How much bandwidth do I need?
 
 As a rough estimate: **~5 GB per 100 accounts**.

@@ -34,6 +34,22 @@ Tu ne sais pas lequel choisir ? Pose la question sur le Discord Orbit — les me
 
 ---
 
+## Région des proxies — important
+
+La région de tes proxies **doit correspondre** au marketplace Amazon sur lequel tu génères.
+
+| Région | Pays du proxy requis |
+|--------|----------------------|
+| 🇫🇷 **FR** | France uniquement — utilise absolument des proxies français |
+| 🇬🇧 **UK** | Royaume-Uni uniquement — utilise absolument des proxies UK |
+| 🇯🇵 **JP** | Toutes les régions fonctionnent — aucune restriction |
+
+:::warning FR & UK — mauvaise région = bans immédiats
+Pour Amazon FR et UK, utiliser des proxies d'un autre pays augmente drastiquement le risque de blocages et de bans lors de la génération. Assure-toi que ton groupe de proxies contient uniquement des proxies du bon pays avant de lancer tes tâches.
+:::
+
+---
+
 ## Combien de bande passante faut-il ?
 
 Estimation indicative : **~5 Go pour 100 comptes**.
