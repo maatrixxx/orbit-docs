@@ -14,6 +14,7 @@ const sidebars = {
         'guide/sms',
         'guide/captcha',
         'guide/first-tasks',
+        'guide/sticky-proxy',
         'guide/best-practices',
       ],
     },

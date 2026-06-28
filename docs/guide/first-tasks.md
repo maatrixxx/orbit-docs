@@ -35,7 +35,7 @@ Even if your emails are iCloud aliases, set them to forward to a Gmail address. 
 :::
 
 ### Discord Webhook *(optional)*
-If you want to receive a notification every time an account is successfully created, paste a Discord webhook URL here.
+If you want to receive a notification every time an account is successfully created or an invite is sent, paste a Discord webhook URL here.
 
 ---
 
@@ -75,13 +75,14 @@ Fill in the form:
 
 | Field | What to enter |
 |-------|---------------|
-| **Region** | FR (France), UK, or JP (Japan) |
+| **Region** | FR (France), UK, JP (Japan), or US |
 | **Number of tasks** | Start with 5–10 to test |
 | **Proxy group** | Select the group you created |
+| **Stick proxy to account** | Check this to permanently attach the proxy to each account — recommended (see [Sticky Proxy Guide](/guide/sticky-proxy)) |
 | **Profile group** | Select your profile group (or leave on "Random") |
 | **Email list** | Select your email group |
 | **Mailbox for OTP** | Select your IMAP account |
-| **SMS country** | France (FR) or UK |
+| **SMS country** | Match the region (FR, UK, JP, or US) |
 | **Account group** | Create a new group — created accounts will be saved here |
 
 Click **Create tasks** — the tasks appear in the list.
@@ -105,3 +106,24 @@ Each task card shows the current step in real time. A typical flow:
 ## 7. Find your created accounts
 
 Go to **Accounts** → select the group you specified → all successfully created accounts are listed with their credentials and cookies.
+
+If you checked **Stick proxy to account**, each account will show a **📌 PROXY** badge — the proxy is now permanently attached.
+
+---
+
+## 8. Run invites
+
+Once you have accounts with valid sessions, go to **Tasks → Amazon Invites**:
+
+1. Select the region and ASIN(s) of the invite-only product
+2. Select your account group
+3. In the **Proxy** section, select **Sticky** if your accounts have attached proxies — this reuses the same IP per account
+4. Click **Create task** then **Start**
+
+If an account's session is expired when the invite runs, click **Run Session** on the task card — Orbit will refresh the session and **automatically relaunch the invite** right after.
+
+---
+
+## Next step
+
+Now that you have a working gen + invite flow, read the **[Sticky Proxy Guide](/guide/sticky-proxy)** for the full recommended setup — including how to configure your proxies for long session durations.

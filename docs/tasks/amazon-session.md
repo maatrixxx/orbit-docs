@@ -16,19 +16,36 @@ Cookies expire over time. If you try to use stale cookies, Amazon will redirect 
 
 ---
 
+## Supported Regions
+
+FR, UK, JP, and US — select the region that matches your account group.
+
+---
+
 ## Creating a Session Task
 
 1. Go to **Tasks** and click **+ Create**.
-2. Select **Amazon Session** (under the Amazon category).
+2. Select **Amazon Session**.
 3. Fill in the form:
 
 | Field | Description |
 |-------|-------------|
-| **Region** | FR, UK, or JP |
+| **Region** | FR, UK, JP, or US |
 | **Account group** | The group of accounts to process |
-| **Proxy group** | Proxies to use for the sessions |
+| **Proxies** | No proxy, with a proxy group, or **Sticky** |
+| **IMAP (OTP email)** | Optional — used if Amazon asks for an email verification code during login |
 
 4. Click **Create task** then **Start**.
+
+---
+
+## Proxy Modes
+
+| Mode | Description |
+|------|-------------|
+| **No proxy** | Sessions go through your local IP |
+| **With proxy** | A random proxy from the selected group is used per account |
+| **Sticky** | Uses the proxy permanently attached to each account — recommended if accounts were generated with sticky proxy |
 
 ---
 
@@ -36,12 +53,13 @@ Cookies expire over time. If you try to use stale cookies, Amazon will redirect 
 
 For each account in the group, Orbit:
 
-1. Makes a lightweight HTTP check using the account's saved cookies. If the session is still active, it re-saves the (possibly refreshed) cookies and stops there — no browser needed.
-2. If the session is invalid or missing, it opens a headless browser and logs in for real, handling:
-   - One-time password / 2FA prompts (via IMAP, if configured)
-   - "Pas maintenant" / "Not now" interstitials
+1. Makes a lightweight HTTP check using the account's saved cookies. If still active, re-saves the cookies and stops there — no browser needed.
+2. If the session is invalid or missing, opens a headless browser and logs in for real, handling:
+   - One-time password / 2FA prompts (via IMAP — automatic if configured)
+   - Email OTP codes (rare, but handled automatically with IMAP)
+   - "Not now" interstitials
    - Suspended/banned account detection
-   - Accounts Amazon no longer recognizes (closed accounts) — flagged separately from a regular login failure
+   - Accounts Amazon no longer recognizes — flagged separately from a regular login failure
 3. On a successful login, saves the fresh cookies back to the account.
 
 If a login attempt hits a transient Amazon error, Orbit retries automatically (up to 4 attempts) with a fresh proxy before giving up.
@@ -61,4 +79,4 @@ If a login attempt hits a transient Amazon error, Orbit retries automatically (u
 
 ## Recommended Frequency
 
-Run Session tasks every **7–14 days** to keep cookies fresh. If accounts will be used for Invite or Win Check tasks, refresh cookies within 24 hours beforehand for best results — or just enable **Include session check** directly on those tasks instead of running a separate Session task first.
+Run Session tasks every **7–14 days** to keep cookies fresh. If accounts will be used for Invite or Win Check tasks, refresh cookies within 24 hours beforehand — or just enable **Include session check** directly on those tasks instead.

@@ -12,7 +12,7 @@ The **Accounts** page is where all Amazon accounts created by Orbit are stored a
 
 ## Account Information
 
-Each account card shows:
+Each account row shows:
 
 | Field | Description |
 |-------|-------------|
@@ -23,6 +23,7 @@ Each account card shows:
 | **Group** | The account group it belongs to |
 | **Status** | Current account health (active, banned, etc.) |
 | **Cookies** | Session cookies — used to open browser sessions |
+| **📌 PROXY** | Badge shown when a sticky proxy is attached to the account |
 
 ---
 
@@ -38,6 +39,33 @@ Each account card shows:
 
 ## Account Groups
 
-Accounts are organised into **groups** (e.g. `Amazon FR — Batch 1`), each tagged with a region (FR, UK, or JP). Groups are used when running Session, Invite, or Win Check tasks — you target an entire group at once, filtered to groups matching the task's region.
+Accounts are organised into **groups** (e.g. `Amazon FR — Batch 1`), each tagged with a region (FR, UK, JP, or US). Groups are used when running Session, Invite, or Win Check tasks — you target an entire group at once, filtered to groups matching the task's region.
 
-Each group shows the total number of accounts and a duplicate-email warning if any account appears more than once.
+---
+
+## Sticky Proxy
+
+A **sticky proxy** is a proxy permanently attached to a specific account. It is used by invite, session, and win check tasks when set to **Sticky** mode — ensuring the account is always seen from the same IP address.
+
+### Viewing a sticky proxy
+
+Accounts with a sticky proxy show a **📌 PROXY** badge next to their email. Click the badge to see:
+- The proxy host and port
+- The username and password
+- A **Remove proxy** button to detach the proxy
+
+### Adding a sticky proxy manually
+
+If an account does not have a sticky proxy attached (no badge), a small **+ proxy** button appears next to the email. Click it to open a form where you can enter the proxy details (host, port, username, password) and save it.
+
+This is useful for accounts that were created before the sticky proxy feature was introduced, or when you want to manually assign a specific proxy to an account.
+
+:::tip
+The recommended way to attach sticky proxies to accounts is to enable **Stick proxy to account** during generation — Orbit then handles the assignment automatically for each new account. See the [Sticky Proxy Guide](/guide/sticky-proxy).
+:::
+
+---
+
+## Wins Dashboard
+
+Accounts track which invite-only products they have won. Click an account to see its win history — product, ASIN, and date.
