@@ -48,15 +48,7 @@ Go to **Proxies** → **Create a group**:
 
 ---
 
-## 3. Set up profiles *(optional but recommended)*
-
-Profiles give each account a realistic name, address, and birthdate. Without profiles, Orbit generates random data automatically — profiles are better for quality accounts.
-
-Go to **Profiles** → **Import** → paste a list of profiles or use the bulk generator.
-
----
-
-## 4. Create an email list
+## 3. Create an email list
 
 Go to **Email Lists** → **Create a group**:
 1. Name your group (e.g. `Amazon FR`)
@@ -67,7 +59,7 @@ Each email will be used for one account.
 
 ---
 
-## 5. Create Amazon Gen tasks
+## 4. Create Amazon Gen tasks
 
 Go to **Tasks** → click **+ Create** → select **Amazon Gen**.
 
@@ -79,7 +71,6 @@ Fill in the form:
 | **Number of tasks** | Start with 5–10 to test |
 | **Proxy group** | Select the group you created |
 | **Stick proxy to account** | Check this to permanently attach the proxy to each account — recommended (see [Sticky Proxy Guide](/guide/sticky-proxy)) |
-| **Profile group** | Select your profile group (or leave on "Random") |
 | **Email list** | Select your email group |
 | **Mailbox for OTP** | Select your IMAP account |
 | **SMS country** | Match the region (FR, UK, JP, or US) |
@@ -89,7 +80,7 @@ Click **Create tasks** — the tasks appear in the list.
 
 ---
 
-## 6. Launch
+## 5. Launch
 
 Click **Start All** (or **Smart Start** to stagger launches and avoid spikes).
 
@@ -103,7 +94,7 @@ Each task card shows the current step in real time. A typical flow:
 
 ---
 
-## 7. Find your created accounts
+## 6. Find your created accounts
 
 Go to **Accounts** → select the group you specified → all successfully created accounts are listed with their credentials and cookies.
 
@@ -111,7 +102,7 @@ If you checked **Stick proxy to account**, each account will show a **📌 PROXY
 
 ---
 
-## 8. Run invites
+## 7. Run invites
 
 Once you have accounts with valid sessions, go to **Tasks → Amazon Invites**:
 
