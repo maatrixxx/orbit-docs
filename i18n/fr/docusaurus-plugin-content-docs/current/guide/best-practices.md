@@ -24,11 +24,15 @@ Utilise **Smart Start** plutôt que **Start All** — ça décale les lancements
 
 ---
 
-## Rotation des proxies
+## Rotation par procuration
 
-Assure-toi que ton groupe de proxies contient **suffisamment de proxies** pour le nombre de tâches que tu fais tourner. Orbit les fait tourner automatiquement, mais si tu n'as que 5 proxies pour 20 tâches, chaque proxy est surexploité — ce qui augmente le risque de ban.
+Le nombre optimal de proxies dépend de leur utilisation :
 
-Ratio recommandé : **au moins 1 proxy pour 2–3 tâches simultanées**.
+**Rotation des proxys (tâches gen)** — l'adresse IP change à chaque requête, permettant ainsi à un seul point de terminaison proxy de gérer plusieurs tâches en parallèle. Un groupe de proxys composé de quelques points de terminaison suffit pour exécuter simultanément des dizaines de tâches gen.
+
+**Proxies persistants (invitation/session/vérification de victoire)** — chaque compte doit utiliser son propre proxy dédié. Le ratio est **d'un proxy par compte** : si vous avez 500 comptes, il vous faut 500 emplacements de proxy persistants distincts. Le proxy n'est pas partagé entre les comptes ; c'est le principe même.
+
+En pratique : achetez des proxys sticky pour gen (bande passante bon marché) et configurez-les avec une durée de session très longue (voir le [guide Sticky Proxy](/guide/sticky-proxy)) afin que l'adresse IP reste fixe suffisamment longtemps pour être enregistrée sur le compte et réutilisée pour toutes les tâches futures.
 
 ---
 

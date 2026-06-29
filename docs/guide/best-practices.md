@@ -32,7 +32,7 @@ The right number of proxies depends on how you're using them:
 
 **Sticky proxies (invite / session / win check)** — each account must always use its own dedicated proxy. Here the ratio is **1 proxy per account**: if you have 500 accounts, you need 500 distinct sticky proxy slots. The proxy isn't shared across accounts — that's the whole point.
 
-In practice: buy rotating proxies for gen (cheap bandwidth), and configure them with a very long session duration (see the [Sticky Proxy Guide](/guide/sticky-proxy)) so the IP stays fixed long enough to be saved on the account and reused for all future tasks.
+In practice: buy sticky proxies for gen (cheap bandwidth), and configure them with a very long session duration (see the [Sticky Proxy Guide](/guide/sticky-proxy)) so the IP stays fixed long enough to be saved on the account and reused for all future tasks.
 
 ---
 
