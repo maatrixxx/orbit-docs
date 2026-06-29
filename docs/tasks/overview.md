@@ -76,3 +76,32 @@ You can run multiple tasks simultaneously. Orbit manages concurrency automatical
 :::tip
 For best results when generating accounts, run 2–5 tasks in parallel with rotating residential proxies. Running too many tasks at once on limited proxies increases the risk of IP overlap.
 :::
+
+---
+
+## Launch Modes
+
+### Smart Start All
+
+Launches all pending tasks using a fixed concurrency pool. You set a **max simultaneous tasks** limit in Settings — Smart Start fills that pool and as soon as one task finishes, it immediately pulls the next one from the queue. This keeps the number of active browsers under control and is recommended when you care about not overloading your machine or your proxy quota.
+
+The progress counter on the button (`4/20`) shows how many tasks have **completed**, not how many are currently running.
+
+### Relay
+
+Relay launches tasks one after another with a **configurable delay between each launch**, regardless of how many tasks are already running. There is no concurrency cap — every launched task runs in parallel with all the others.
+
+**When to use it:** invite tasks, session tasks, and win-check tasks are lightweight (HTTP-based, no real browser). You can safely launch hundreds in a row without hitting memory limits. Relay is the right mode for these.
+
+**Configuring the delay:**
+
+Click the **Relay** button to open the delay picker:
+
+| Mode | How it works |
+|------|-------------|
+| **Fixed** | Same delay between every launch — e.g. `60` launches one task every 60 seconds |
+| **Range** | A random delay is picked at each step — e.g. `30–90` waits between 30 and 90 seconds, chosen randomly each time to simulate human pacing |
+
+All values are in **seconds**.
+
+Once running, the button shows a live countdown (`42s`) to the next launch, along with the number of tasks already launched (`12/50`). Click the button again to stop the relay loop at any time — tasks already launched keep running normally.
