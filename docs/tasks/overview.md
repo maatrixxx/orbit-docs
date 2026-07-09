@@ -21,8 +21,11 @@ The **Tasks** page is the operational core of Orbit. Each task represents an aut
 | **iCloud Gen** | Generates iCloud Hide My Email aliases |
 | **iCloud Delete** | Deletes existing Hide My Email aliases |
 | **iCloud Extract** | Extracts all existing Hide My Email aliases into a mail list |
+| **Fnac Gen** | Creates new Fnac member accounts |
+| **Fnac Fill Profile** | Logs into existing Fnac accounts and fills the address book |
+| **Fnac Buy** | Logs in and completes a 1-click purchase on Fnac |
 
-Task types are organized into two categories in the **+ Create** menu: **Amazon** and **iCloud**.
+Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, and **Fnac**.
 
 ---
 

@@ -86,6 +86,17 @@ const sidebars = {
         'tasks/amazon-checkout',
       ],
     },
+    {
+      type: 'category',
+      label: 'Tasks — Fnac',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'tasks/fnac-generator',
+        'tasks/fnac-fill-profile',
+        'tasks/fnac-buy',
+      ],
+    },
     'troubleshooting',
   ],
 }
