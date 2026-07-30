@@ -35,13 +35,6 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 |------|-------------|
 | **KingDultes Buy** | Guest checkout on KingDultes (Shopify) — email list + profile + card per task |
 
-### Other
-
-| Task | Description |
-|------|-------------|
-| **Nike Gen** | Creates Nike FR accounts from an email list or profile group |
-| **Funko** | Automates Funko Pop releases |
-
 ### iCloud
 
 | Task | Description |
@@ -50,7 +43,7 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **iCloud Delete** | Deletes existing Hide My Email aliases |
 | **iCloud Extract** | Extracts all existing Hide My Email aliases into a mail list |
 
-Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **KingDultes**, and **Other**.
+Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, and **KingDultes**.
 
 ---
 

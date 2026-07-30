@@ -24,10 +24,6 @@ Orbit is a desktop automation tool built for resellers. It handles the time-cons
 ### KingDultes
 - **KingDultes Buy** — Guest checkout on KingDultes (Shopify): email list + identity profile + payment card per task.
 
-### Nike & Funko
-- **Nike Gen** — Creates Nike FR accounts with IMAP OTP handling.
-- **Funko** — Automates Funko Pop releases.
-
 ### Order Tracking
 - Automatically scans IMAP inboxes every 2 minutes for Amazon order, shipping, and delivery emails. Tracks statuses (ordered, shipped, delivered, locker, relay), shows Mondial Relay codes and relay points, and calculates pending refunds.
 

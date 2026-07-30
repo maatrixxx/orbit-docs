@@ -114,13 +114,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Tasks — Other',
-      collapsible: true,
-      collapsed: false,
-      items: ['tasks/tasks-other'],
-    },
-    {
-      type: 'category',
       label: 'Order Tracking',
       collapsible: true,
       collapsed: false,
