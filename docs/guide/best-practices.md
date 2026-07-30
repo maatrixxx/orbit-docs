@@ -26,9 +26,13 @@ Use **Smart Start** instead of **Start All** — it staggers task launches every
 
 ## Proxy rotation
 
-Make sure your proxy group has **enough proxies** for the number of tasks you're running. Orbit rotates through them automatically, but if you only have 5 proxies for 20 tasks, each proxy gets hammered — increasing ban risk.
+The right number of proxies depends on how you're using them:
 
-A good ratio: **at least 1 proxy per 2–3 simultaneous tasks**.
+**Rotating proxies (gen tasks)** — the IP changes on every request, so a single proxy endpoint can handle many tasks in parallel. One proxy group with a handful of endpoints is enough to run dozens of gen tasks simultaneously.
+
+**Sticky proxies (invite / session / win check)** — each account must always use its own dedicated proxy. Here the ratio is **1 proxy per account**: if you have 500 accounts, you need 500 distinct sticky proxy slots. The proxy isn't shared across accounts — that's the whole point.
+
+In practice: buy sticky proxies for gen (cheap bandwidth), and configure them with a very long session duration (see the [Sticky Proxy Guide](/guide/sticky-proxy)) so the IP stays fixed long enough to be saved on the account and reused for all future tasks.
 
 ---
 

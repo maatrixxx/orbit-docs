@@ -14,6 +14,7 @@ const sidebars = {
         'guide/sms',
         'guide/captcha',
         'guide/first-tasks',
+        'guide/sticky-proxy',
         'guide/best-practices',
       ],
     },
@@ -98,7 +99,11 @@ const sidebars = {
       label: 'Tasks — Fnac',
       collapsible: true,
       collapsed: false,
-      items: ['tasks/tasks-fnac'],
+      items: [
+        'tasks/fnac-generator',
+        'tasks/fnac-fill-profile',
+        'tasks/fnac-buy',
+      ],
     },
     {
       type: 'category',

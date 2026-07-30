@@ -50,6 +50,8 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **iCloud Delete** | Deletes existing Hide My Email aliases |
 | **iCloud Extract** | Extracts all existing Hide My Email aliases into a mail list |
 
+Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **KingDultes**, and **Other**.
+
 ---
 
 ## Task Groups
@@ -102,42 +104,35 @@ Select multiple tasks using the checkboxes (or click and drag) and use the bulk 
 
 ---
 
-## Smart Start & Relay
-
-Two advanced launch modes are available in the Tasks toolbar for running large numbers of tasks without opening hundreds of browsers simultaneously.
+## Launch Modes
 
 ### Smart Start All
 
-**Smart Start All** starts tasks one by one from the queue, launching the next task only when a previous one completes (or stops). This keeps concurrency under control and works especially well with virtual queue batches.
+Launches all pending tasks using a fixed concurrency pool — as soon as one task finishes, it immediately pulls the next one from the queue. This keeps the number of active browsers under control and is recommended for Amazon Gen tasks and any flow that opens real browser windows.
 
-- While running, the button shows **N/Total** progress.
-- Click again to **stop** the Smart Start loop (already-running tasks are not interrupted).
-- Tasks stopped by a captcha/SMS "Stop" action are automatically requeued by Smart Start.
+The progress counter on the button (`4/20`) shows how many tasks have **completed**, not how many are currently running. Tasks stopped by a captcha/SMS "Stop" action are automatically requeued.
 
 ### Relay
 
-**Relay** launches tasks in timed waves — a configurable delay between each launch (or each batch of launches).
+Relay launches tasks one after another with a **configurable delay between each launch**, regardless of how many tasks are already running. There is no concurrency cap — every launched task runs in parallel with all the others.
 
-Click **Relay** to open the config panel:
+**When to use it:** Invite, Session, and Win Check tasks are lightweight (HTTP-based, no real browser). You can safely launch hundreds in a row. Relay is the right mode for these.
 
-| Setting | Description |
-|---------|-------------|
-| **Fixed delay** | Wait a fixed number of seconds between each launch (e.g. `60s`) |
-| **Random delay** | Wait a random amount between min and max seconds (e.g. `30–90s`) |
+Click the **Relay** button to open the delay picker:
+
+| Mode | How it works |
+|------|-------------|
+| **Fixed** | Same delay between every launch — e.g. `60` launches one task every 60 seconds |
+| **Range** | A random delay is picked at each step — e.g. `30–90` waits between 30 and 90 seconds, simulating human pacing |
 | **Batch size** | How many tasks to launch at each interval (default: 1) |
 
-- While running, the button shows **N/Total** progress and a countdown timer for the next launch.
-- Click again to **stop** the Relay loop.
-
-:::tip
-Relay is ideal for drops where you want tasks to start at human-looking intervals rather than all simultaneously. Use a random delay of 30–90s with batch size 1 for the most natural pattern.
-:::
+All values are in **seconds**. Once running, the button shows a live countdown (`42s`) to the next launch and the number of tasks already launched (`12/50`). Click again to stop.
 
 ---
 
 ## Kill Browsers
 
-The **Kill Browsers** button in the toolbar forcefully terminates all Playwright Chromium processes opened by Orbit. Use this if you notice orphaned browser windows lingering after tasks finish.
+The **Kill Browsers** button forcefully terminates all Playwright Chromium processes opened by Orbit. Use this if you notice orphaned browser windows lingering after tasks finish.
 
 ---
 

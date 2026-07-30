@@ -37,9 +37,24 @@ Before running your first Generator task, make sure you have:
 
 1. Go to **Tasks** and click **+ Create**.
 2. Select **Amazon Generator** (under the Amazon category).
-3. Fill in the form (see sections below).
-4. Click **Create task**.
-5. Click **Start** to begin.
+3. Fill in the form:
+
+| Field | Description |
+|-------|-------------|
+| **Region** | FR, UK, JP, or BE |
+| **Number of tasks** | How many accounts to create |
+| **Proxy group** | Which proxy group to route traffic through |
+| **Stick proxy to account** | See [Sticky Proxy](/guide/sticky-proxy) — attaches the assigned proxy permanently to each created account |
+| **Email source** | Email list or Profile group (see below) |
+| **Mailbox for OTP** | IMAP account to read the email verification code from |
+| **SMS country** | Must match the target marketplace region |
+| **Account group** | Where to save successfully created accounts |
+| **Captcha action** | What to do when an Arkose captcha appears |
+| **SMS action** | What to do when phone verification appears |
+| **Delete email after creation** | Remove email from list once account is created |
+
+4. Click **Create tasks** — they appear in the task list.
+5. Click **Start** (or **Smart Start All** to stagger launches automatically).
 
 ---
 
@@ -69,7 +84,7 @@ Choose how Orbit fills in the name and email for each account:
 | **With proxy** | Route traffic through the selected proxy group. Strongly recommended. |
 | **No proxy** | No proxy used (not recommended for large runs). |
 
-**Stick proxy to account** — when enabled, the proxy assigned to each task is permanently attached to the resulting account and reused automatically for all subsequent Invite, Session, and Win Check tasks on that account. Useful when accounts need a consistent IP identity.
+**Stick proxy to account** — when enabled, the proxy assigned to each task is permanently attached to the resulting account and reused automatically for all subsequent Invite, Session, and Win Check tasks on that account.
 
 ### Region
 
@@ -134,10 +149,7 @@ Orbit fills in:
 - **Email address** — from your email list or profile
 - **Password** — randomly generated or your custom password
 
-### 4. Submit the Form
-Orbit clicks **Continue** and waits for the next step.
-
-### 5. Verify Email (OTP)
+### 4. Verify Email (OTP)
 Amazon sends a one-time code to the email address. Orbit:
 1. Connects to the email inbox via IMAP (if configured)
 2. Waits for Amazon's email to arrive (up to 2 minutes)
@@ -146,7 +158,7 @@ Amazon sends a one-time code to the email address. Orbit:
 
 If no IMAP is configured, the browser window pauses waiting for you to enter the code manually.
 
-### 6. Solve Arkose Captcha
+### 5. Solve Arkose Captcha
 Amazon's Arkose/FunCaptcha challenge may appear. Orbit:
 1. Waits up to **1 minute** for the challenge to fully load
 2. Sends the page token to **CapGuru** for solving (if enabled)
@@ -158,7 +170,7 @@ Amazon's Arkose/FunCaptcha challenge may appear. Orbit:
 Arkose captchas are challenging. A ~70–85% success rate per attempt is normal.
 :::
 
-### 7. Add a Phone Number
+### 6. Add a Phone Number
 Amazon requires phone verification. Orbit:
 1. Requests a virtual number from your SMS provider for the target country
 2. Enters it on the phone verification page
@@ -167,10 +179,14 @@ Amazon requires phone verification. Orbit:
 
 Behaviour when this step is reached depends on your **SMS action** setting.
 
+### 7. Detect Unusual Activity
+If Amazon returns an "unusual activity" or "account creation failed" page after the captcha, Orbit automatically flags the task and stops. Change the proxy and retry.
+
 ### 8. Save the Account
 Once registration is complete, Orbit saves the account with:
 - Email, password, first name, last name, phone number
 - Session cookies (for future sessions)
+- Sticky proxy (if **Stick proxy to account** was enabled)
 - Status: **Active**
 
 ---
@@ -192,6 +208,7 @@ Once registration is complete, Orbit saves the account with:
 | `Captcha failed` | CapGuru couldn't solve the challenge |
 | `Stopped — SMS detected` | SMS action was set to "Stop" |
 | `Stopped — captcha detected` | Captcha action was set to "Stop" |
+| `Unusual activity detected` | Amazon blocked registration — proxy/email flagged |
 
 ---
 
@@ -210,7 +227,7 @@ When creating more than ~50 tasks, Orbit creates a **virtual queue** (batch). In
 ## Tips for Higher Success Rates
 
 - **Use rotating residential proxies** — datacenter IPs are almost always flagged
-- **Use iCloud Hide My Email aliases** — they have very high inbox delivery rates
+- **Use iCloud Hide My Email aliases** — very high inbox delivery rates
 - **Keep CapGuru balance topped up** — failed solves waste time and proxies
 - **Run 2–4 tasks in parallel** — enough for throughput without overwhelming your proxies
 - **Use the correct marketplace country for SMS** — phone numbers must match the Amazon locale
