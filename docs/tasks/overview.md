@@ -43,7 +43,15 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **iCloud Delete** | Deletes existing Hide My Email aliases |
 | **iCloud Extract** | Extracts all existing Hide My Email aliases into a mail list |
 
-Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, and **KingDultes**.
+### Philibert
+
+| Task | Description |
+|------|-------------|
+| **Philibert Gen** | Creates new Philibert accounts |
+| **Philibert Fill** | Logs into Philibert accounts and adds a delivery address |
+| **Philibert Buy** | Logs in and completes a full checkout on Philibert |
+
+Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **KingDultes**, and **Philibert**.
 
 ---
 

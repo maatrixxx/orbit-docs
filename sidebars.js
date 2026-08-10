@@ -107,6 +107,17 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Tasks — Philibert',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'tasks/philibert-generator',
+        'tasks/philibert-fill-profile',
+        'tasks/philibert-buy',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Tasks — KingDultes',
       collapsible: true,
       collapsed: false,
