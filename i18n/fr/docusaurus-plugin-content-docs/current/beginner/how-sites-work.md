@@ -54,14 +54,14 @@ Un clic navigateur prend 200–500ms à traiter visuellement avant que quoi que 
 
 ---
 
-## Philibert — Drops Click & Collect
+## Philibert — Drops en temps réel
 
 Philibert est le plus grand revendeur de jeux de société en France. Ils droppent régulièrement des articles **limités ou de retour en stock** qui partent instantanément.
 
-Leur système est similaire à Fnac — une course à l'ATC directe — mais ils proposent aussi le **click & collect** (retrait en magasin), qui dispose parfois d'un stock légèrement plus important.
+Leur système fonctionne exactement comme Fnac : une **course à l'ATC** directe. Au moment où le produit est mis en ligne, tout le monde se précipite pour l'ajouter au panier simultanément — le premier à finaliser le checkout gagne.
 
 **Ce qu'Orbit automatise :**
-- ATC au moment du drop
+- ATC HTTP au moment précis du drop
 - Checkout avec sélection de livraison ou point relais
 
 ---

@@ -54,14 +54,14 @@ A browser click takes 200–500ms to process visually before anything is sent to
 
 ---
 
-## Philibert — Click & Collect Drops
+## Philibert — Real-Time ATC Drops
 
 Philibert is France's largest board game retailer. They regularly drop **limited or back-in-stock** items that sell out instantly.
 
-Their system is similar to Fnac — a direct ATC race — but they also offer **click & collect** (pick up in store), which sometimes has separate, slightly larger stock.
+Their system works exactly like Fnac: a direct **ATC race**. The moment a product goes live, everyone rushes to add it to cart simultaneously — first checkout wins.
 
 **What Orbit automates:**
-- ATC at the moment of drop
+- HTTP ATC at the exact moment of drop
 - Checkout with delivery or relay point selection
 
 ---
