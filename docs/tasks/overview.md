@@ -51,7 +51,19 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **Philibert Fill** | Logs into Philibert accounts and adds a delivery address |
 | **Philibert Buy** | Logs in and completes a full checkout on Philibert |
 
-Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **KingDultes**, and **Philibert**.
+### Shopify
+
+| Task | Description |
+|------|-------------|
+| **Shopify Buy Experimental** | Generic guest checkout on any Shopify store — email list, profile group, payment card, optional relay delivery |
+
+### Tools
+
+| Page | Description |
+|------|-------------|
+| **Relay Points** | Configure favorite relay points per carrier (Mondial Relay, Chronopost, Colissimo…) — used by Shopify Buy Auto relay |
+
+Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **KingDultes**, **Philibert**, and **Shopify**.
 
 ---
 

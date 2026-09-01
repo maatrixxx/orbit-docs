@@ -1,6 +1,23 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
 
+  // ── Beginner sidebar (translatable) ────────────────────────────────────
+  beginnerSidebar: [
+    {
+      type: 'category',
+      label: 'Beginner',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'beginner/intro',
+        'beginner/how-sites-work',
+        'beginner/proxies-beginner',
+        'beginner/emails-beginner',
+        'beginner/next-steps',
+      ],
+    },
+  ],
+
   // ── Guide sidebar (beginner guide only — translatable) ──────────────────
   guideSidebar: [
     {
@@ -122,6 +139,13 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: ['tasks/tasks-kingdultes'],
+    },
+    {
+      type: 'category',
+      label: 'Tasks — Shopify',
+      collapsible: true,
+      collapsed: false,
+      items: ['tasks/shopify-buy', 'tasks/relay-points'],
     },
     {
       type: 'category',

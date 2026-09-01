@@ -1,4 +1,12 @@
 {
+  "sidebar.beginnerSidebar.category.Beginner": {
+    "message": "Débutant",
+    "description": "The label for the Beginner category in the sidebar"
+  },
+  "sidebar.guideSidebar.category.Beginner Guide": {
+    "message": "Guide Débutant",
+    "description": "The label for the Beginner Guide category in the sidebar"
+  },
   "sidebar.docs.category.🚀 Beginner Guide": {
     "message": "🚀 Guide Débutant",
     "description": "The label for the Beginner Guide category in the sidebar"
