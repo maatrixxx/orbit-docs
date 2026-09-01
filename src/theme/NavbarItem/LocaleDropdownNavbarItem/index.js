@@ -5,7 +5,7 @@ import LocaleDropdownNavbarItem from '@theme-original/NavbarItem/LocaleDropdownN
 // Only show the language switcher on Guide pages
 export default function LocaleDropdownNavbarItemWrapper(props) {
   const { pathname } = useLocation()
-  if (!pathname.includes('/guide')) {
+  if (!pathname.includes('/guide') && !pathname.includes('/beginner')) {
     return null
   }
   return <LocaleDropdownNavbarItem {...props} />
