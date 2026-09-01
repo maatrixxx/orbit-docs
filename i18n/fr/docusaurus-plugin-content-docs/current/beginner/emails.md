@@ -27,7 +27,7 @@ Ce sont de véritables comptes Apple iCloud — pas de faux mails jetables. Amaz
 - La surveillance IMAP des boîtes est intégrée — Orbit lit les codes OTP et les mails de confirmation directement
 
 :::tip Meilleure option pour les débutants
-Si tu débutes, iCloud est le chemin le plus simple. Aucune configuration supplémentaire, aucun service externe nécessaire.
+Si tu débutes, iCloud est le chemin le plus simple. Aucune configuration supplémentaire, aucun service externe nécessaire — il faut juste un abonnement iCloud+ (2€/mois, requis pour générer des adresses).
 
 → Voir **[Emails — Générateur iCloud](../emails/icloud-generator)** dans la section Docs pour la configuration.
 :::
@@ -66,7 +66,7 @@ Si tu n'es pas encore sur le serveur, vérifie le lien dans ton mail de confirma
 | | iCloud | Catchall |
 |--|--------|----------|
 | **Difficulté de mise en place** | Facile (intégré) | Moyen (nécessite un domaine) |
-| **Coût** | Gratuit | ~10€/an pour un domaine |
+| **Coût** | ~2€/mois (iCloud+ requis, 750 adresses) | ~10€/an pour un domaine |
 | **Volume** | Limité (Apple limite la création) | Illimité |
 | **Idéal pour** | Démarrer, petits runs | Opérations à grande échelle |
 

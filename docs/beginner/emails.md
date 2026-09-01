@@ -27,7 +27,7 @@ These are genuine Apple iCloud accounts — not fake disposable emails. Amazon a
 - IMAP inbox monitoring is built in — Orbit reads OTP codes and confirmation emails directly
 
 :::tip Best option for beginners
-If you're just getting started, iCloud is the simplest path. No extra setup, no external service needed.
+If you're just getting started, iCloud is the simplest path. No extra setup, no external service needed — just an iCloud+ subscription (€2/month, required to generate addresses).
 
 → See **[Emails — iCloud Generator](../emails/icloud-generator)** in the Docs section for setup.
 :::
@@ -66,7 +66,7 @@ If you're not in the server yet, check the link in your license confirmation ema
 | | iCloud | Catchall |
 |--|--------|----------|
 | **Setup difficulty** | Easy (built-in) | Medium (requires a domain) |
-| **Cost** | Free | ~€10/year for a domain |
+| **Cost** | ~€2/month (iCloud+ required, 750 addresses) | ~€10/year for a domain |
 | **Scale** | Limited (Apple rate-limits creation) | Unlimited |
 | **Best for** | Getting started, small runs | Large-scale operations |
 
