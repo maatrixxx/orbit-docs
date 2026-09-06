@@ -33,9 +33,9 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 
 | Task | Description |
 |------|-------------|
-| **Philibert Gen** | Creates Philibert accounts — email confirmation handled via IMAP |
-| **Philibert Fill** | Fills delivery address on existing Philibert accounts |
-| **Philibert Buy** | Adds to cart and checks out on philibertnet.com — home delivery or relay point |
+| **Philibert Gen** | Creates new Philibert accounts |
+| **Philibert Fill** | Logs into Philibert accounts and adds a delivery address |
+| **Philibert Buy** | Logs in and completes a full checkout on Philibert |
 
 ### Dreamland
 
@@ -58,7 +58,19 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **iCloud Delete** | Deletes existing Hide My Email aliases |
 | **iCloud Extract** | Extracts all existing Hide My Email aliases into a mail list |
 
-Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **Philibert**, **Dreamland**, and **KingDultes**.
+### Shopify
+
+| Task | Description |
+|------|-------------|
+| **Shopify Buy Experimental** | Generic guest checkout on any Shopify store — email list, profile group, payment card, optional relay delivery |
+
+### Tools
+
+| Page | Description |
+|------|-------------|
+| **Relay Points** | Configure favorite relay points per carrier (Mondial Relay, Chronopost, Colissimo…) — used by Shopify Buy Auto relay |
+
+Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **Philibert**, **Dreamland**, **KingDultes**, and **Shopify**.
 
 ---
 

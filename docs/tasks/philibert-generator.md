@@ -1,24 +1,23 @@
 ---
 id: philibert-generator
-title: Philibert Generator
-sidebar_position: 30
+title: Philibert Account Generator
+sidebar_position: 9
 ---
 
-# Philibert Generator
+# Philibert Account Generator
 
-The Philibert Generator creates accounts on **philibertnet.com**, the leading French board game retailer. Philibert drops limited-edition and pre-order products that sell out within seconds. Having multiple accounts ready before a drop maximises your chances.
+The **Philibert Generator** creates accounts on **philibert.com** automatically. It handles the full registration flow: form filling, password setup, and confirmation — all without any manual steps.
 
 ---
 
 ## Prerequisites
 
-- A **mail list** — one email per account
-- An **IMAP account** — for email confirmation
-- A **profile group** — provides first name, last name, date of birth, address
-- A **proxy group** (recommended — residential proxies preferred)
+- A **Philibert account group** to save the created accounts
+- A **profile group** (optional — random French identity data is used if none selected)
+- A **proxy group** (optional)
 
-:::info Password
-Orbit auto-generates a secure password for each account and stores it in the account group.
+:::info No captcha or IMAP required
+Philibert's registration page currently has no captcha and no email verification step. The account is created instantly after form submission.
 :::
 
 ---
@@ -31,45 +30,57 @@ Orbit auto-generates a secure password for each account and stores it in the acc
 
 | Field | Description |
 |-------|-------------|
-| **Mail list** | Emails to register — one account per email |
-| **Account group** | Where the created accounts will be stored |
-| **IMAP account** | Reads the confirmation email to activate the account |
-| **Profile group** | Identity data for the registration form |
-| **Proxy group** | Recommended for anti-detection |
+| **Account group** | Where to save successfully created accounts |
+| **Profile group** | Source of identity data (name, birthdate). Optional — random French data is used if not set |
+| **Proxy group** | Proxy to route traffic through (optional) |
+| **Number of tasks** | How many accounts to create |
 
-4. Click **Create tasks** and launch with **Smart Start All**.
-
----
-
-## How It Works
-
-For each email, Orbit:
-
-1. Opens the Philibert registration page (`/fr/creation-compte`) in a hidden browser.
-2. Fills: email, first name, last name, date of birth, password.
-3. Submits and waits for the confirmation email via IMAP.
-4. Clicks the activation link to confirm the account.
-5. Verifies login succeeds on `/mon-compte`.
+4. Click **Create tasks** — they appear in the task list.
+5. Click **Start** to begin.
 
 ---
 
-## Task Status Labels
+## What Happens Step by Step
 
-| Status | Meaning |
-|--------|---------|
-| **Account created** | Registration and email activation successful |
-| **Already exists** | Email already registered on Philibert |
-| **IMAP error** | Confirmation email not received in time |
-| **Error** | Registration failed — check proxy or profile data |
+### 1. Load Registration Page
+Orbit opens an invisible Electron browser session and navigates to the Philibert registration page.
+
+### 2. Fill Registration Form
+The following fields are filled automatically:
+
+| Field | Source |
+|-------|--------|
+| First name | Profile `firstname` or random French name |
+| Last name | Profile `lastname` or random French name |
+| Email | Generated automatically |
+| Password | Randomly generated secure password |
+| Date of birth | Profile `birthdate` (YYYY-MM-DD) or random |
+
+### 3. Submit
+Orbit submits the registration form.
+
+### 4. Confirm Success
+After submission, Orbit waits for the redirect to `/mon-compte` to confirm the account was created.
+
+### 5. Save Account
+Email, password, name, and birthdate are saved to the chosen Philibert account group.
 
 ---
 
-## Tips
+## Task Status Messages
 
-:::tip Run well ahead of drops
-Philibert detects mass account creation near a drop. Create your pool at least a few days in advance.
-:::
+| Message | Meaning |
+|---------|---------|
+| `Loading registration page...` | Browser opened, navigating to signup |
+| `Filling form...` | Filling in identity fields |
+| `Form filled (Prénom Nom) — submitting...` | Form complete, submitting |
+| `Waiting for confirmation...` | Waiting for post-submit redirect |
+| `Account created! Saving...` | Account confirmed and being saved |
 
-:::tip Residential proxies
-Philibert applies fingerprinting and rate-limiting. Use rotating residential proxies, keep concurrency low (3–5 tasks), and run tasks with Smart Start All.
-:::
+---
+
+## Notes
+
+- Philibert accounts **do not require email verification** at creation. They are immediately usable.
+- To complete a purchase, you'll need to also run **Philibert Fill** (to add a delivery address) before running **Philibert Buy**.
+- Use a profile group for consistent identity data, especially if you plan to fill addresses later with the same profiles.
