@@ -107,6 +107,27 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Tasks — Philibert',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'tasks/philibert-generator',
+        'tasks/philibert-fill',
+        'tasks/philibert-buy',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Tasks — Dreamland',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'tasks/dreamland-generator',
+        'tasks/dreamland-invite',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Tasks — KingDultes',
       collapsible: true,
       collapsed: false,

@@ -29,6 +29,21 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **Fnac Fill** | Fills shipping/billing info on existing Fnac accounts using profiles |
 | **Fnac Buy** | Purchases a product on fnac.com with existing accounts (uses CapSolver for DataDome) |
 
+### Philibert
+
+| Task | Description |
+|------|-------------|
+| **Philibert Gen** | Creates Philibert accounts — email confirmation handled via IMAP |
+| **Philibert Fill** | Fills delivery address on existing Philibert accounts |
+| **Philibert Buy** | Adds to cart and checks out on philibertnet.com — home delivery or relay point |
+
+### Dreamland
+
+| Task | Description |
+|------|-------------|
+| **Dreamland Gen** | Creates Dreamland accounts on dreamland.be or dreamland.nl |
+| **Dreamland Invite** | Submits invite requests for limited products on dreamland.be/nl/fr |
+
 ### KingDultes
 
 | Task | Description |
@@ -43,7 +58,7 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **iCloud Delete** | Deletes existing Hide My Email aliases |
 | **iCloud Extract** | Extracts all existing Hide My Email aliases into a mail list |
 
-Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, and **KingDultes**.
+Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **Philibert**, **Dreamland**, and **KingDultes**.
 
 ---
 
