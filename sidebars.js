@@ -159,6 +159,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Discord Monitor',
+      collapsible: true,
+      collapsed: false,
+      items: ['monitor/overview'],
+    },
+    {
+      type: 'category',
       label: 'Order Tracking',
       collapsible: true,
       collapsed: false,
