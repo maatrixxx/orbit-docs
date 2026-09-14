@@ -14,7 +14,7 @@ The **Philibert Buy** task logs into a Philibert account, waits for a product UR
 
 - A **Philibert account group** with accounts that have a **delivery address filled** (run Philibert Fill first)
 - A **payment card** assigned to each task (card number, expiry, CVV)
-- A **proxy group** (optional)
+- A **proxy group** — strongly recommended. **SOCKS5 proxies required** (e.g. [Flames](https://flameproxies.com/dashboard/new-proxies))
 
 :::warning Fill profile first
 Philibert requires a saved delivery address to complete checkout. Run **Philibert Fill** on your accounts before launching Buy tasks.

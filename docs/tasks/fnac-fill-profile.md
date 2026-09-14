@@ -15,7 +15,7 @@ The **Fnac Fill Profile** task logs into existing Fnac accounts and fills in the
 - A **Fnac account group** with existing accounts (created by Fnac Gen)
 - An **IMAP account** configured in Settings (for OTP if Fnac requests it during login)
 - A **profile group** (optional — random data is used if none selected)
-- A **proxy group** (optional)
+- A **proxy group** — recommended. **SOCKS5 proxies required** (e.g. [Flames](https://flameproxies.com/dashboard/new-proxies))
 
 ---
 

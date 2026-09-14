@@ -48,6 +48,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Mobile App',
+      collapsible: true,
+      collapsed: false,
+      items: ['mobile/mobile-overview'],
+    },
+    {
+      type: 'category',
       label: 'Settings',
       collapsible: true,
       collapsed: false,
@@ -146,6 +153,13 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: ['tasks/shopify-buy', 'tasks/relay-points'],
+    },
+    {
+      type: 'category',
+      label: 'Discord Monitor',
+      collapsible: true,
+      collapsed: false,
+      items: ['monitor/overview'],
     },
     {
       type: 'category',

@@ -19,7 +19,7 @@ This task is under active development. Compatibility may vary across Shopify sto
 - An **email list** with available emails (see [Creating an Email List](/emails/creating-a-list))
 - A **profile group** with shipping/billing identities (see [Identity Profiles](/profiles/overview))
 - A **payment card** — assigned per task after creation, or from a card group
-- A **proxy group** (optional)
+- A **proxy group** — strongly recommended. **SOCKS5 proxies required** (e.g. [Flames](https://flameproxies.com/dashboard/new-proxies))
 - For relay delivery: **Relay Points** configured with at least one favorite per carrier (see [Relay Points](/tasks/relay-points))
 
 ---

@@ -14,7 +14,7 @@ The **Philibert Fill Profile** task logs into existing Philibert accounts and ad
 
 - A **Philibert account group** with existing accounts (created by Philibert Gen)
 - A **profile group** (optional — random data is used if none selected)
-- A **proxy group** (optional)
+- A **proxy group** — recommended. **SOCKS5 proxies required** (e.g. [Flames](https://flameproxies.com/dashboard/new-proxies))
 
 ---
 

@@ -15,7 +15,7 @@ The **KingDultes Buy** task automates guest checkout on [KingDultes](https://www
 - An **email list** with available emails (see [Creating an Email List](/emails/creating-a-list))
 - A **profile group** with shipping/billing identities (see [Identity Profiles](/profiles/overview))
 - A **payment card** configured per task after creation (each task has its own card field)
-- A **proxy group** (optional but recommended)
+- A **proxy group** — strongly recommended. **SOCKS5 proxies required** (e.g. [Flames](https://flameproxies.com/dashboard/new-proxies))
 - The **product URL** from KingDultes (e.g. `https://www.kingdultes.com/products/...`)
 
 ---

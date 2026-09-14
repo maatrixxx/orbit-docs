@@ -21,11 +21,18 @@ Amazon flags registrations that come from the same IP address. Without proxies:
 
 ## Recommended Proxy Type
 
-Orbit is designed to work with **rotating residential proxies**. Each time a task connects, it gets a fresh IP address automatically — no manual rotation needed.
+Orbit is designed to work with **residential proxies**. For most FCFS sites, **SOCKS5 proxies are required** (see below).
 
-:::tip
-Rotating residential proxies are the most effective for Amazon account generation. Datacenter proxies have high ban rates and are not recommended.
+:::tip Recommended providers
+- **[Flames](https://flameproxies.com/dashboard/new-proxies)** — SOCKS5 residential proxies, required for FCFS sites (Fnac, Philibert, Shopify, King Jouet, KingDultes)
+- **[Proxy Baron](https://proxybaron.com)** — top residential proxies, best choice for Amazon gen and invites
+
+Datacenter proxies have high ban rates and are not recommended.
 :::
+
+## SOCKS5 requirement for FCFS sites
+
+Fnac, Philibert, Shopify, King Jouet, and KingDultes require **SOCKS5 proxies**. HTTP proxies will not work correctly with these sites. Make sure your proxy group uses SOCKS5 proxies (format: `socks5://host:port:user:pass` or plain `host:port:user:pass` from a SOCKS5 provider like Flames).
 
 ---
 

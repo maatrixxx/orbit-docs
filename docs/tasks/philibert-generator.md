@@ -14,7 +14,7 @@ The **Philibert Generator** creates accounts on **philibert.com** automatically.
 
 - A **Philibert account group** to save the created accounts
 - A **profile group** (optional — random French identity data is used if none selected)
-- A **proxy group** (optional)
+- A **proxy group** — strongly recommended. **SOCKS5 proxies required** (e.g. [Flames](https://flameproxies.com/dashboard/new-proxies))
 
 :::info No captcha or IMAP required
 Philibert's registration page currently has no captcha and no email verification step. The account is created instantly after form submission.

@@ -18,7 +18,7 @@ Before running your first Fnac Gen task, make sure you have:
 - A **CapSolver API key** configured in Settings (for hCaptcha / reCAPTCHA solving)
 - An **IMAP account** configured in Settings (for OTP email verification)
 - A **Fnac account group** to receive the created accounts
-- A **proxy group** (recommended but optional)
+- A **proxy group** — strongly recommended. **SOCKS5 proxies required** (e.g. [Flames](https://flameproxies.com/dashboard/new-proxies))
 
 ---
 

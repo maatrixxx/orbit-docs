@@ -14,7 +14,11 @@ The **Fnac Buy** task logs into a Fnac account, waits for a product URL, then co
 
 - A **Fnac account group** with accounts that have a registered payment card (CB)
 - An **IMAP account** (optional — for OTP during login if Fnac requests it)
-- A **proxy group** (optional)
+- A **proxy group** — strongly recommended. **SOCKS5 proxies required** (e.g. [Flames](https://flameproxies.com/dashboard/new-proxies))
+
+:::warning SOCKS5 proxies only
+Fnac's anti-bot system requires SOCKS5 proxies. HTTP proxies will not work. Use a provider that offers SOCKS5 residential proxies.
+:::
 
 ---
 
