@@ -34,14 +34,7 @@ Your Discord user token gives full access to your Discord account. Never share i
 
 The video below shows how to extract your token from the Discord desktop app:
 
-<iframe
-  width="100%"
-  style={{aspectRatio: '16/9', border: 'none', marginBottom: '1.5rem', borderRadius: '8px'}}
-  src="https://www.youtube.com/embed/dmjNAW8McLU"
-  title="How to get your Discord user token"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-/>
+**[▶ Watch the tutorial on YouTube](https://www.youtube.com/watch?v=dmjNAW8McLU)**
 
 **Quick steps (written version):**
 
