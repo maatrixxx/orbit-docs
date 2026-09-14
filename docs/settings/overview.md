@@ -17,6 +17,7 @@ The Settings page is where you configure all the external services Orbit connect
 | **SMS** | Phone number rental for Amazon account phone verification |
 | **IMAP** | Email inbox access for OTP code reading and order tracking |
 | **Discord** | Webhook URLs for success/failure notifications |
+| **Monitor** | Discord Gateway listener for automatic buy task triggering on drops |
 
 ---
 
@@ -39,3 +40,4 @@ Settings are stored locally on your machine and persist across app restarts and 
 | Win Check email scan | IMAP account |
 | Order Tracking auto-scan | IMAP account |
 | Discord notifications | Discord webhook |
+| Buy tasks — Discord trigger | Monitor (Discord user token + channel) |

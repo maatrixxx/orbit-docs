@@ -29,6 +29,21 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **Fnac Fill** | Fills shipping/billing info on existing Fnac accounts using profiles |
 | **Fnac Buy** | Purchases a product on fnac.com with existing accounts (uses CapSolver for DataDome) |
 
+### Philibert
+
+| Task | Description |
+|------|-------------|
+| **Philibert Gen** | Creates new Philibert accounts |
+| **Philibert Fill** | Logs into Philibert accounts and adds a delivery address |
+| **Philibert Buy** | Logs in and completes a full checkout on Philibert |
+
+### Dreamland
+
+| Task | Description |
+|------|-------------|
+| **Dreamland Gen** | Creates Dreamland accounts on dreamland.be or dreamland.nl |
+| **Dreamland Invite** | Submits invite requests for limited products on dreamland.be/nl/fr |
+
 ### KingDultes
 
 | Task | Description |
@@ -43,14 +58,6 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 | **iCloud Delete** | Deletes existing Hide My Email aliases |
 | **iCloud Extract** | Extracts all existing Hide My Email aliases into a mail list |
 
-### Philibert
-
-| Task | Description |
-|------|-------------|
-| **Philibert Gen** | Creates new Philibert accounts |
-| **Philibert Fill** | Logs into Philibert accounts and adds a delivery address |
-| **Philibert Buy** | Logs in and completes a full checkout on Philibert |
-
 ### Shopify
 
 | Task | Description |
@@ -63,7 +70,7 @@ The **Tasks** page is the operational core of Orbit. Each task represents one au
 |------|-------------|
 | **Relay Points** | Configure favorite relay points per carrier (Mondial Relay, Chronopost, Colissimo…) — used by Shopify Buy Auto relay |
 
-Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **KingDultes**, **Philibert**, and **Shopify**.
+Task types are organized into categories in the **+ Create** menu: **Amazon**, **iCloud**, **Fnac**, **Philibert**, **Dreamland**, **KingDultes**, and **Shopify**.
 
 ---
 

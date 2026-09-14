@@ -142,6 +142,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Tasks — Dreamland',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'tasks/dreamland-generator',
+        'tasks/dreamland-invite',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Tasks — KingDultes',
       collapsible: true,
       collapsed: false,
