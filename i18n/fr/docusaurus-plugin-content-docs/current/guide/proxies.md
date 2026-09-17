@@ -18,7 +18,12 @@ Les proxies datacenter sont bon marché mais facilement détectés et bloqués p
 
 ## Fournisseurs recommandés
 
-### Resilab *(recommandé pour débuter)*
+### Flame Proxies *(option la moins chère)*
+**[flameproxies.com/dashboard/new-proxies](https://flameproxies.com/dashboard/new-proxies)**
+
+L'option la plus abordable du marché. Parfait pour démarrer sans trop dépenser. Bien adapté pour la gen Amazon et les invitations.
+
+### Resilab *(bon rapport qualité/prix)*
 **[resilab.vip/dashboard](https://www.resilab.vip/dashboard)**
 
 Un bon fournisseur resi avec un excellent rapport qualité/prix. Très adapté pour la gen Amazon.
