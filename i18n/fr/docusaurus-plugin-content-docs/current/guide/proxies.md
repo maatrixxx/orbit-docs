@@ -18,23 +18,22 @@ Les proxies datacenter sont bon marché mais facilement détectés et bloqués p
 
 ## Fournisseurs recommandés
 
-### Flame Proxies *(option la moins chère)*
+### Flames *(sites FCFS + gen Amazon)*
 **[flameproxies.com/dashboard/new-proxies](https://flameproxies.com/dashboard/new-proxies)**
 
-L'option la plus abordable du marché. Parfait pour démarrer sans trop dépenser. Bien adapté pour la gen Amazon et les invitations.
+Le fournisseur de référence pour les **sites FCFS** (Fnac, Philibert, Shopify, King Jouet, KingDultes). Flames propose des **proxies SOCKS5**, indispensables pour que ces sites fonctionnent correctement dans Orbit. Fonctionne aussi très bien pour la gen Amazon.
 
-### Resilab *(bon rapport qualité/prix)*
-**[resilab.vip/dashboard](https://www.resilab.vip/dashboard)**
+:::tip SOCKS5 requis pour les sites FCFS
+Fnac, Philibert, Shopify, King Jouet et KingDultes nécessitent tous des **proxies SOCKS5**. Utilise uniquement Flames (ou un autre fournisseur proposant du SOCKS5) pour ces tâches.
+:::
 
-Un bon fournisseur resi avec un excellent rapport qualité/prix. Très adapté pour la gen Amazon.
+### Proxy Baron *(meilleur pour Amazon)*
+**[proxybaron.com](https://proxybaron.com)**
 
-### Mars Proxies *(qualité premium)*
-**[dashboard.marsproxies.com](https://dashboard.marsproxies.com/products/ultra-residential-proxies)**
+Des proxies résidentiels haut de gamme — le meilleur choix pour la **génération de comptes Amazon et les invitations**. Excellents taux de succès et fiabilité à grande échelle.
 
-Plus cher, mais l'une des options les plus fiables du marché. Si tu comptes tourner un gros volume, l'investissement vaut le coup.
-
-:::tip Autres options
-Tu ne sais pas lequel choisir ? Pose la question sur le Discord Orbit — les membres partagent régulièrement leurs retours sur les différents fournisseurs.
+:::tip Tu ne sais pas lequel choisir ?
+Pose la question sur le Discord Orbit — les membres partagent régulièrement leurs retours sur les différents fournisseurs.
 :::
 
 ---
