@@ -1,12 +1,12 @@
 ---
 id: overview
-title: Beginner Guide — Overview
+title: Amazon Guide — Overview
 sidebar_position: 1
 ---
 
-# Beginner Guide
+# Amazon Guide
 
-Welcome! This guide is written for people who are **completely new to botting**. You don't need any prior knowledge — just follow each step in order and you'll be generating Amazon accounts in no time.
+Welcome! This guide is written for people who are **completely new to botting on Amazon**. You don't need any prior knowledge — just follow each step in order and you'll be generating Amazon accounts in no time.
 
 ---
 

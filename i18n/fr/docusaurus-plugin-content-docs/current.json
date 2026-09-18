@@ -3,9 +3,13 @@
     "message": "Débutant",
     "description": "The label for the Beginner category in the sidebar"
   },
-  "sidebar.guideSidebar.category.Beginner Guide": {
-    "message": "Guide Débutant",
-    "description": "The label for the Beginner Guide category in the sidebar"
+  "sidebar.guideSidebar.category.Amazon Guide": {
+    "message": "Guide Amazon",
+    "description": "The label for the Amazon Guide category in the sidebar"
+  },
+  "sidebar.guideSidebar.category.FCFS Sites Guide": {
+    "message": "Guide Sites FCFS",
+    "description": "The label for the FCFS Sites Guide category in the sidebar"
   },
   "sidebar.docs.category.🚀 Beginner Guide": {
     "message": "🚀 Guide Débutant",
@@ -38,5 +42,9 @@
   "sidebar.docs.category.Vinted": {
     "message": "Vinted",
     "description": "The label for the Vinted category in the sidebar"
+  },
+  "sidebar.docsSidebar.category.Monitor": {
+    "message": "Monitor",
+    "description": "The label for the Monitor category in the sidebar"
   }
 }

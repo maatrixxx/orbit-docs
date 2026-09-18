@@ -18,11 +18,11 @@ const sidebars = {
     },
   ],
 
-  // ── Guide sidebar (beginner guide only — translatable) ──────────────────
+  // ── Guide sidebar (translatable) ────────────────────────────────────────
   guideSidebar: [
     {
       type: 'category',
-      label: 'Beginner Guide',
+      label: 'Amazon Guide',
       collapsible: true,
       collapsed: false,
       items: [
@@ -31,8 +31,21 @@ const sidebars = {
         'guide/sms',
         'guide/captcha',
         'guide/first-tasks',
-        'guide/sticky-proxy',
         'guide/best-practices',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'FCFS Sites Guide',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'guide/fcfs-overview',
+        'guide/fcfs-proxies',
+        'guide/fcfs-captcha',
+        'guide/fcfs-first-tasks',
+        'guide/fcfs-monitor',
+        'guide/fcfs-best-practices',
       ],
     },
   ],
@@ -166,10 +179,10 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Discord Monitor',
+      label: 'Monitor',
       collapsible: true,
       collapsed: false,
-      items: ['monitor/overview'],
+      items: ['monitor/overview', 'monitor/classic-monitor'],
     },
     {
       type: 'category',

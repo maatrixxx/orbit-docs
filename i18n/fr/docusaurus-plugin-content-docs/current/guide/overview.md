@@ -1,12 +1,12 @@
 ---
 id: overview
-title: Guide Débutant — Vue d'ensemble
+title: Guide Amazon — Vue d'ensemble
 sidebar_position: 1
 ---
 
-# Guide Débutant
+# Guide Amazon
 
-Bienvenue ! Ce guide est écrit pour les personnes qui **débutent totalement dans le botting**. Aucune connaissance préalable n'est nécessaire — suis chaque étape dans l'ordre et tu génèreras des comptes Amazon en un rien de temps.
+Bienvenue ! Ce guide est écrit pour les personnes qui **débutent totalement dans le botting sur Amazon**. Aucune connaissance préalable n'est nécessaire — suis chaque étape dans l'ordre et tu génèreras des comptes Amazon en un rien de temps.
 
 ---
 
