@@ -22,15 +22,11 @@ This is useful for **restocks** where there's no Discord announcement, or as a b
 
 ---
 
-## How It Works
+## Requirements
 
-```
-Monitor polls product URL → detects in-stock → notifies / triggers tasks
-```
+The Classic Monitor requires **SOCKS5 proxies** to function correctly. Monitoring without proxies will expose your IP to repeated requests and will likely result in a ban on the target site.
 
-1. You add a product URL to monitor along with its site.
-2. Orbit checks the page periodically using its stock detection system.
-3. When the product becomes available, the monitor triggers — either sending a notification or firing your waiting buy tasks.
+Make sure you have a proxy group configured in **Settings → Proxies** before creating a monitor entry. Orbit will warn you if you attempt to start without proxies.
 
 ---
 
@@ -44,7 +40,8 @@ Click **+ Add** and fill in:
 |-------|-------------|
 | **Site** | Select the site (Fnac, King Jouet, Philibert) |
 | **URL** | The product page URL to monitor |
-| **Name** | A label to identify this monitor entry |
+| **Proxy Group** | Select a SOCKS5 proxy group — required for reliable monitoring |
+| **Delay (ms)** | Time between each check, in milliseconds (e.g. `2000` = 2 seconds) |
 
 Click **Save** and then **Start** on the monitor row to begin polling.
 
@@ -54,10 +51,10 @@ Click **Save** and then **Start** on the monitor row to begin polling.
 
 | Status | Meaning |
 |--------|---------|
-| **MONITORING** | Actively polling — waiting for stock |
-| **IN STOCK** | Product detected as available — trigger fired |
-| **Stopped** | Monitor paused |
-| **Error** | Could not reach the product page |
+| 🔵 **MONITORING** | Actively polling — waiting for stock |
+| 🟢 **IN STOCK** | Product detected as available — trigger fired |
+| ⚪ **Stopped** | Monitor paused manually |
+| 🔴 **Error** | Could not reach the product page or unexpected response |
 
 ---
 
@@ -72,5 +69,6 @@ This ensures your buy tasks fire the instant stock appears — without you needi
 ## Notes
 
 - The Classic Monitor does not require a Discord account.
+- **Always use a SOCKS5 proxy group** — running without proxies risks getting your IP banned on the site.
 - Use it for products that restock without announcements, or in parallel with the Discord Monitor for maximum coverage.
-- Polling interval is configured automatically based on the site.
+- Lower delay values mean more frequent checks but higher proxy usage — `2000ms` is a good starting point.
