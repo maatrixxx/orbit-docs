@@ -150,6 +150,7 @@ const sidebars = {
       items: [
         'tasks/philibert-generator',
         'tasks/philibert-fill-profile',
+        'tasks/philibert-buy',
       ],
     },
     {
